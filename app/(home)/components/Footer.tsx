@@ -56,8 +56,8 @@ size={24}/>
        <div
        className='flex
        p-3
+       md:items-start
        flex-row
-
        justify-center
        items-center
        gap-x-24'>
@@ -68,7 +68,10 @@ w-full
 
 flex
 flex-col
-space-y-4'>
+md:flex-row
+space-y-4
+md:space-y-0
+md:gap-x-8'>
 {/*   About US */}
 <div
 
@@ -100,6 +103,7 @@ flex-col'
 <div
 
 className='
+ 
 flex
 flex-col'
 >
@@ -112,6 +116,7 @@ flex-col'
     className='text-xs
     text-[#626671]
     mt-4
+    
     space-y-2'> 
     <p>Future Shaper</p>
      
@@ -126,7 +131,11 @@ w-full
 
 flex
 flex-col
-space-y-4'>
+md:flex-row
+space-y-4
+ 
+md:space-y-0
+md:gap-x-8'>
 {/*   OUR WORK */}
 <div
 
