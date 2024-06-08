@@ -3,13 +3,16 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import Logo from './Logo'
 import { Button } from '@/components/ui/button'
-import { Loader2, Menu } from 'lucide'
-import { Clipboard, EyeIcon, Heart, Home, Info, Loader2Icon, MenuIcon, Phone, UserPlus } from 'lucide-react'
+ 
+import { Clipboard, EyeIcon, Heart, Home, Info, Loader2Icon, MenuIcon, Phone, PhoneCall, UserPlus } from 'lucide-react'
 import { usePathname, useRouter } from 'next/navigation'
-import MobileMenu from './MobileMenu'
+ 
 
 import Link from 'next/link'
 import clsx from 'clsx'
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { GoMail } from 'react-icons/go'
+import { SiGmail } from 'react-icons/si'
 
 function  Navbar() {
 const router=useRouter()
@@ -44,6 +47,7 @@ const [isLoading,setIsLoading]=useState(false)
     className='flex
     flex-col
     w-full
+    space-y-4
     justify-center
     items-center
    
@@ -51,10 +55,63 @@ const [isLoading,setIsLoading]=useState(false)
         <div
         className='flex
         flex-row
+        gap-x-20
         '>
+            {/* social media links */}
+ <div
+
+className='flex
+flex-row
+w-full
+justify-center
+items-center
+gap-x-8
+text-slate-700
+'>
+<FaInstagram
+size={24} />
+<FaLinkedin
+size={24}/>
+<FaFacebook
+size={24}/>
+<FaTwitter
+size={24}/>
+<FaYoutube
+size={24}/>
 
 
-            
+</div>
+{/* Mail to */}
+<div
+className='flex
+flex-row
+gap-x-2'
+
+>
+  <SiGmail
+  size={24}/>
+  <a href="mailto:donorcare@Nourished.org">
+        <p
+        className='font-medium
+        text-slate-700'>donorcare@Nourished.org</p>
+      </a>
+</div>
+{/* Phone */}
+<div
+className='flex
+flex-row
+gap-x-2'
+
+>
+  <Phone
+  size={24}/>
+  <a href="tel:+1234567890">
+        <p
+        className='font-medium
+        text-slate-700'>+1234567890</p>
+      </a>
+</div>
+
         </div>
         <div
         className='

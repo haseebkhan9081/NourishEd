@@ -27,7 +27,7 @@ export default function layout({children}:{children
 <div
 className='
 hidden
-h-[80px] 
+h-[110px] 
 md:flex
 inset-y-0 
 w-full
@@ -47,7 +47,7 @@ flex
 flex-col
 h-full
 p-6
-mt-[80px]
+mt-[110px]
 '>
   {children}
 </main>
