@@ -2,9 +2,11 @@ import React from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import MobileNavbar from './components/MobileNavbar'
+import { Transition } from '@headlessui/react'
  
 export default function layout({children}:{children
 :React.ReactNode}) {
+  
   return (
    
      <div
@@ -40,17 +42,17 @@ fixed
 
 </div>
 <main
+
 className='
 bg-[#E6F3FF]
 overflow-hidden
 flex
 flex-col
 h-full
-p-6
-md:p-12
 mt-[110px]
 '>
-  {children}
+ {children}
+  
 </main>
 
 <Footer/>

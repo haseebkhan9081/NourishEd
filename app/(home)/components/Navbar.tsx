@@ -27,6 +27,7 @@ const [isLoading,setIsLoading]=useState(false)
     justify-between
     items-center
     p-2
+    
     px-8
     flex
     flex-row
@@ -47,78 +48,24 @@ const [isLoading,setIsLoading]=useState(false)
     className='flex
     flex-col
     w-full
-    space-y-4
+    space-y-8
     justify-center
     items-center
+     
    
    '>
+     
+        
+
+        {/* Navigation */}
         <div
-        className='flex
-        flex-row
-        lg:gap-x-20
-         
-        '>
-            {/* social media links */}
- <div
 
-className='flex
-flex-row
-w-full
-justify-center
-items-center
-gap-x-8
-text-slate-700
-'>
-<FaInstagram
-size={24} />
-<FaLinkedin
-size={24}/>
-<FaFacebook
-size={24}/>
-<FaTwitter
-size={24}/>
-<FaYoutube
-size={24}/>
-
-
-</div>
-{/* Mail to */}
-<div
-className='flex
-flex-row
-gap-x-2'
-
->
-  <SiGmail
-  size={24}/>
-  <a href="mailto:donorcare@Nourished.org">
-        <p
-        className='font-medium
-        text-slate-700'>donorcare@Nourished.org</p>
-      </a>
-</div>
-{/* Phone */}
-<div
-className='flex
-flex-row
-gap-x-2'
-
->
-  <Phone
-  size={24}/>
-  <a href="tel:+1234567890">
-        <p
-        className='font-medium
-        text-slate-700'>+1234567890</p>
-      </a>
-</div>
-
-        </div>
-        <div
         className='
         flex
         gap-x-8
-        flex-row'
+        flex-row
+         
+        '
         >
             <Link
  href={'/'}
@@ -132,13 +79,13 @@ flex-row
 h-full
 w-full
 gap-x-2
+items-center
 justify-center
 '>
-    <p className='xl:text-lg text-sm'>Home</p>
+    <p className='xl:text-base text-sm'>Home</p>
      <Home
       className='w-4
-      xl:w-6
-      xl:h-6
+       
       h-4'   /></div></Link>           
 
 <Link
@@ -152,14 +99,14 @@ className='flex
 flex-row
 h-full
 w-full
+items-center
 gap-x-2
 justify-center
 '>
-    <p className='xl:text-lg text-base'>About Us</p>
+    <p className='xl:text-base text-base'>About Us</p>
      <Info
       className='w-4
-      xl:w-6
-      xl:h-6
+       
       h-4'/></div>
 </Link>
      
@@ -175,13 +122,13 @@ flex-row
 h-full
 w-full
 gap-x-2
+items-center
 justify-center
 '>
-    <p className='xl:text-lg text-sm'>Our Vision & Mission </p>
+    <p className='xl:text-base text-sm'>Our Vision & Mission </p>
      <EyeIcon
      className='w-4
-     xl:w-6
-     xl:h-6
+      
      h-4'/></div></Link>
 
      <Link
@@ -196,13 +143,13 @@ flex-row
 h-full
 w-full
 gap-x-2
+items-center
 justify-center
 '>
-    <p className='xl:text-lg  text-sm'>Programs</p>
+    <p className='xl:text-base  text-sm'>Programs</p>
      <Clipboard
      className='w-4
-     xl:w-6
-     xl:h-6
+      
      h-4'/></div>
      </Link>
 
@@ -217,14 +164,14 @@ className='flex
 flex-row
 h-full
 w-full
+items-center
 gap-x-2
 justify-center
 '>
-    <p className='xl:text-lg text-sm'>Get Involved</p>
+    <p className='xl:text-base text-sm'>Get Involved</p>
      <UserPlus
      className='w-4
-     xl:w-6
-     xl:h-6
+     
      h-4'/></div>
     </Link>    
     
@@ -240,13 +187,13 @@ flex-row
 h-full
 w-full
 gap-x-2
+items-center
 justify-center
 '>
-    <p className='xl:text-lg text-sm'>Donate</p>
+    <p className='xl:text-base text-sm'>Donate</p>
      <Heart
       className='w-4
-      xl:w-6
-      xl:h-6
+       
       h-4'/></div>
     </Link>
     
@@ -263,13 +210,12 @@ flex-row
 h-full
 w-full
 gap-x-2
+items-center
 justify-center
 '>
-    <p className='xl:text-lg text-sm'>Contact Us</p>
+    <p className='xl:text-base text-sm'>Contact Us</p>
      <Phone
      className='w-4
-     xl:w-6
-     xl:h-6
      h-4'/></div> 
  </Link> 
         </div>
@@ -281,8 +227,10 @@ justify-center
      className='flex
      flex-row
      space-x-2
+
      items-center'>
      <Button
+     
      onClick={()=>{
       setIsLoading(true)
       router.push('/donate')
