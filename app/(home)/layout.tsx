@@ -15,7 +15,7 @@ export default function layout({children}:{children
        <div
         className='
          h-[80px] 
-         md:hidden
+         lg:hidden
         inset-y-0 
         w-full
          z-50
@@ -28,7 +28,7 @@ export default function layout({children}:{children
 className='
 hidden
 h-[110px] 
-md:flex
+lg:flex
 inset-y-0 
 w-full
 z-50

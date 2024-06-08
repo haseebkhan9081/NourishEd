@@ -55,7 +55,8 @@ const [isLoading,setIsLoading]=useState(false)
         <div
         className='flex
         flex-row
-        gap-x-20
+        lg:gap-x-20
+         
         '>
             {/* social media links */}
  <div
@@ -133,8 +134,12 @@ w-full
 gap-x-2
 justify-center
 '>
-    <p className='text-lg'>Home</p>
-     <Home/></div></Link>           
+    <p className='xl:text-lg text-sm'>Home</p>
+     <Home
+      className='w-4
+      xl:w-6
+      xl:h-6
+      h-4'   /></div></Link>           
 
 <Link
 
@@ -150,8 +155,12 @@ w-full
 gap-x-2
 justify-center
 '>
-    <p className='text-lg'>About Us</p>
-     <Info/></div>
+    <p className='xl:text-lg text-base'>About Us</p>
+     <Info
+      className='w-4
+      xl:w-6
+      xl:h-6
+      h-4'/></div>
 </Link>
      
     <Link
@@ -168,8 +177,12 @@ w-full
 gap-x-2
 justify-center
 '>
-    <p className='text-lg'>Our Vision & Mission</p>
-     <EyeIcon/></div></Link>
+    <p className='xl:text-lg text-sm'>Our Vision & Mission </p>
+     <EyeIcon
+     className='w-4
+     xl:w-6
+     xl:h-6
+     h-4'/></div></Link>
 
      <Link
     className={clsx(
@@ -185,8 +198,12 @@ w-full
 gap-x-2
 justify-center
 '>
-    <p className='text-lg'>Programs</p>
-     <Clipboard/></div>
+    <p className='xl:text-lg  text-sm'>Programs</p>
+     <Clipboard
+     className='w-4
+     xl:w-6
+     xl:h-6
+     h-4'/></div>
      </Link>
 
 
@@ -203,8 +220,12 @@ w-full
 gap-x-2
 justify-center
 '>
-    <p className='text-lg'>Get Involved</p>
-     <UserPlus/></div>
+    <p className='xl:text-lg text-sm'>Get Involved</p>
+     <UserPlus
+     className='w-4
+     xl:w-6
+     xl:h-6
+     h-4'/></div>
     </Link>    
     
     <Link
@@ -221,8 +242,12 @@ w-full
 gap-x-2
 justify-center
 '>
-    <p className='text-lg'>Donate</p>
-     <Heart/></div>
+    <p className='xl:text-lg text-sm'>Donate</p>
+     <Heart
+      className='w-4
+      xl:w-6
+      xl:h-6
+      h-4'/></div>
     </Link>
     
 
@@ -240,8 +265,12 @@ w-full
 gap-x-2
 justify-center
 '>
-    <p className='text-lg'>Contact Us</p>
-     <Phone/></div> 
+    <p className='xl:text-lg text-sm'>Contact Us</p>
+     <Phone
+     className='w-4
+     xl:w-6
+     xl:h-6
+     h-4'/></div> 
  </Link> 
         </div>
 
