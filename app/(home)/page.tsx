@@ -1,15 +1,23 @@
 import React from 'react'
+import CarouslHome from './components/Carousel'
+import Image from 'next/image'
 
 function Home() {
   return (
-    <div>This is the Home Page
+    <div
+    className='w-full
+    h-full'> 
+
+   
+    <div
+    className='lg:p-12
+    p-6
+    w-full'
+    ><CarouslHome/></div>
 
 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra.
-
-Donec vel egestas dolor, nec dignissim metus. Donec augue elit, rhoncus ac sodales id, porttitor vitae est. Donec laoreet rutrum libero sed pharetra. Duis a arcu convallis, gravida purus eget, mollis diam.
-    </div>
+  </div>
   )
 }
 
