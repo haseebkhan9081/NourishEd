@@ -10,8 +10,11 @@ import {
 import { Clipboard, EyeIcon, Heart, Home, Info, Menu, Phone, UserPlus } from 'lucide-react'
 import { Separator } from '@/components/ui/separator'
 import Link from 'next/link'
-  
+import { usePathname } from 'next/navigation'
+import clsx from 'clsx'
+
 function MobileMenu() {
+    const pathname=usePathname()
     const [open,setIsOpen]=useState(false)
   return (
     <Sheet
@@ -34,9 +37,12 @@ function MobileMenu() {
          items-center
          
          space-y-8'>
- <Link
+           <Link
+           onClick={()=>setIsOpen(false)}
  href={'/'}
- onClick={()=>setIsOpen(false)}
+ className={clsx(
+    pathname=='/'&&'border-b-2 border-[#4CB566] transition ease-in duration-300'
+ )}
  >
  <div 
 className='flex
@@ -51,6 +57,9 @@ justify-center
 
 <Link
 onClick={()=>setIsOpen(false)}
+className={clsx(
+    pathname.includes('aboutus')&&'border-b-2 border-[#4CB566] transition ease-in duration-300'
+ )}
 href={'/aboutus'}>
 <div 
 className='flex
@@ -66,7 +75,9 @@ justify-center
      
     <Link
     onClick={()=>setIsOpen(false)}
-    
+    className={clsx(
+        pathname.includes('ourVisionAndMission')&&'border-b-2 border-[#4CB566] transition ease-in duration-300'
+     )}
     href={'/ourVisionAndMission'}>
     <div 
 className='flex
@@ -81,6 +92,9 @@ justify-center
 
      <Link
      onClick={()=>setIsOpen(false)}
+    className={clsx(
+        pathname.includes('programs')&&'border-b-2 border-[#4CB566] transition ease-in duration-300'
+     )}
      
      href={'/programs'}>
      <div 
@@ -98,6 +112,9 @@ justify-center
 
  <Link
  onClick={()=>setIsOpen(false)}
+ className={clsx(
+    pathname.includes('getInvolved')&&'border-b-2 border-[#4CB566] transition ease-in duration-300'
+ )}
  href={'/getInvolved'}>
      <div 
 className='flex
@@ -112,8 +129,12 @@ justify-center
     </Link>    
     
     <Link
+    onClick={()=>setIsOpen(false)}
+     className={clsx(
+        pathname.includes('donate')&&'border-b-2 border-[#4CB566] transition ease-in duration-300'
+     )}
     href={'/donate'}
-    onClick={()=>setIsOpen(false)}>
+     >
      <div 
 className='flex
 flex-row
@@ -128,9 +149,12 @@ justify-center
     
 
  <Link
- 
+ onClick={()=>setIsOpen(false)}
+ className={clsx(
+    pathname.includes('contactUs')&&'border-b-2 border-[#4CB566] transition ease-in duration-300'
+ )}
  href={'/contactUs'}
- onClick={()=>setIsOpen(false)}>
+  >
 <div 
 className='flex
 flex-row
@@ -141,7 +165,7 @@ justify-center
 '>
     <p className='text-lg'>Contact Us</p>
      <Phone/></div> 
- </Link>   
+ </Link>  
      
          </div>
       </SheetHeader>
