@@ -47,6 +47,7 @@ flex
 flex-col
 h-full
 p-6
+md:p-12
 mt-[110px]
 '>
   {children}
