@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import MobileNavbar from './components/MobileNavbar'
  
 export default function layout({children}:{children
 :React.ReactNode}) {
@@ -14,28 +15,28 @@ export default function layout({children}:{children
        <div
         className='
          h-[80px] 
-         
+         md:hidden
         inset-y-0 
         w-full
          z-50
          bg-white
         fixed
         '>
-             <Navbar/>
+             <MobileNavbar/>
         </div>
 <div
 className='
-
-hidden 
+hidden
+h-[80px] 
 md:flex
-  w-56
-   flex-col
-    fixed
-     inset-y-0 
-     z-50
+inset-y-0 
+w-full
+z-50
+bg-white
+fixed
 
 '>
-     
+  <Navbar/>   
 
 </div>
 <main
@@ -45,8 +46,8 @@ overflow-hidden
 flex
 flex-col
 h-full
- 
-mt-[136px]
+p-6
+mt-[80px]
 '>
   {children}
 </main>

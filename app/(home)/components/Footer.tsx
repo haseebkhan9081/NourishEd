@@ -2,12 +2,13 @@ import React from 'react'
 import Logo from './Logo'
 import { Facebook, Instagram, Linkedin, Twitter, Youtube } from 'lucide-react'
 import { Separator } from '@/components/ui/separator'
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa'
 
 function Footer() {
   return (
     <div 
     className='bg-[#EBEBEB]
-    mb-2
+    p-4
     w-full'>
         
         <div
@@ -38,11 +39,16 @@ justify-center
 items-center
 gap-x-8
 text-[#4CB566]'>
-<Instagram />
-<Linkedin/>
-<Facebook/>
-<Twitter/>
-<Youtube/>
+<FaInstagram
+size={24} />
+<FaLinkedin
+size={24}/>
+<FaFacebook
+size={24}/>
+<FaTwitter
+size={24}/>
+<FaYoutube
+size={24}/>
 
 
 </div>
@@ -54,7 +60,7 @@ text-[#4CB566]'>
 
        justify-center
        items-center
-       w-full'>
+       gap-x-24'>
 {/* the first column */}
 <div
 className='
@@ -163,7 +169,7 @@ flex-col'
     text-[#626671]
     mt-4
     space-y-2'> 
-    <p>Future Shaper</p>
+    <p>Online Donation</p>
      
     </div>
 
@@ -173,13 +179,13 @@ flex-col'
        <div
        className='p-4 w-full'>
        <Separator
-       className='w-full bg-[#626671]'/>
+       className='w-full bg-[#90939b]'/>
        </div>
        <div>
-       <div>
+       <div className='text-[#626671]'>
         All Rights Reserved @2024
        </div>
-       <div>The NourishEd Foundation</div>
+       <div className='text-[#626671]'>The NourishEd Foundation</div>
         </div>
         </div>
 

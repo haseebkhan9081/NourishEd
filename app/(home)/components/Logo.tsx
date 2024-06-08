@@ -13,7 +13,7 @@ function Logo() {
 
  <div
  className=' text-[#4CB566]'>
-  <p className='text-2xl'>NourishEd</p>  
+  <p className='text-2xl font-bold'>NourishEd</p>  
     <p
     className='text-[8px] text-slate-700'>Eradicating hunger from Classrooms in Pakistan
 </p>
