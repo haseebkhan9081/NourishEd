@@ -42,9 +42,9 @@ function Home() {
           leaveTo="translate-y-full opacity-0"
         >
           <div
-          onLoad={handleCarouselLoad} 
+         
           className='w-full h-full inset-0'>
-            <CarouslHome  />
+            <CarouslHome   onLoad={handleCarouselLoad} />
           </div>
         </Transition>
       </div>
