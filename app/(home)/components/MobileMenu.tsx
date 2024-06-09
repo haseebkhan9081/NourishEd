@@ -12,6 +12,7 @@ import { Separator } from '@/components/ui/separator'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
+import Logo from './Logo'
 
 function MobileMenu() {
     const pathname=usePathname()
@@ -25,7 +26,7 @@ function MobileMenu() {
     <SheetContent>
       <SheetHeader
       className='h-full'>
-        <SheetTitle>User Profile here if we allow them to Login in future...</SheetTitle>
+        <SheetTitle><Logo/></SheetTitle>
          <Separator
          />
          <div
@@ -53,7 +54,7 @@ gap-x-2
 justify-center
 '>
     <p className='text-lg'>Home</p>
-     <Home/></div></Link>           
+     </div></Link>           
 
 <Link
 onClick={()=>setIsOpen(false)}
@@ -70,7 +71,7 @@ gap-x-2
 justify-center
 '>
     <p className='text-lg'>About Us</p>
-     <Info/></div>
+      </div>
 </Link>
      
     <Link
@@ -88,7 +89,7 @@ gap-x-2
 justify-center
 '>
     <p className='text-lg'>Our Vision & Mission</p>
-     <EyeIcon/></div></Link>
+    </div></Link>
 
      <Link
      onClick={()=>setIsOpen(false)}
@@ -106,7 +107,7 @@ gap-x-2
 justify-center
 '>
     <p className='text-lg'>Programs</p>
-     <Clipboard/></div>
+    </div>
      </Link>
 
 
@@ -125,7 +126,7 @@ gap-x-2
 justify-center
 '>
     <p className='text-lg'>Get Involved</p>
-     <UserPlus/></div>
+      </div>
     </Link>    
     
     <Link
@@ -164,7 +165,7 @@ gap-x-2
 justify-center
 '>
     <p className='text-lg'>Contact Us</p>
-     <Phone/></div> 
+      </div> 
  </Link>  
      
          </div>

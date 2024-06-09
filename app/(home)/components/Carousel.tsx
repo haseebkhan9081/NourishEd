@@ -36,7 +36,6 @@ const CarouslHome: React.FC<CarouslHomeProps> = ({ onLoad }) => {
             <Image
               src={image.src}
               alt={`Image ${index + 1}`}
-              
               layout="fill"
               objectFit="cover"
               className="object-cover z-30"
@@ -44,7 +43,7 @@ const CarouslHome: React.FC<CarouslHomeProps> = ({ onLoad }) => {
             <div className="absolute inset-0 flex justify-center bg-black/25 opacity-0 hover:opacity-100 hover:transition hover:ease-in hover:duration-300 items-center h-full w-full">
               <Button
                 size={"lg"}
-                className="bg-[#4CB566] opacity-100 bottom-0 flex"
+                className="bg-warmGreen opacity-100 bottom-0 flex"
               >
                 Donate Now!
               </Button>

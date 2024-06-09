@@ -44,7 +44,7 @@ const [isLoading,setIsLoading]=useState(false)
       router.push('/donate')
       setIsLoading(false) 
      }}
-     className='bg-green-600
+     className='bg-warmGreen
      w-24
      h-9
      '
