@@ -36,9 +36,9 @@ const CarouslHome: React.FC<CarouslHomeProps> = ({ onLoad }) => {
             <Image
               src={image.src}
               alt={`Image ${index + 1}`}
-              width={100}
-              height={100}
-              layout="responsive"
+              
+              layout="fill"
+              objectFit="cover"
               className="object-cover z-30"
             />
             <div className="absolute inset-0 flex justify-center bg-black/25 opacity-0 hover:opacity-100 hover:transition hover:ease-in hover:duration-300 items-center h-full w-full">
