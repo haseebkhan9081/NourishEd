@@ -19,7 +19,7 @@ const CarouslHome: React.FC<CarouslHomeProps> = ({ onLoad }) => {
     // Simulate loading time before calling onLoad
     const timer = setTimeout(() => {
       onLoad();
-    }, 1000); // Adjust the delay as necessary
+    }, 100); // Adjust the delay as necessary
 
     return () => clearTimeout(timer);
   }, [onLoad]);
