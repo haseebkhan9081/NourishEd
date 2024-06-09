@@ -352,29 +352,29 @@ p-8">
   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
     <div className="flex flex-col items-center bg-neutralWhite p-4 rounded shadow-md">
       <Image src="/partner1.png" alt="Partner 1" 
-      layout='responsive'
-      width={50}
-      height={50}
-      className="w-24 h-24 mb-4"/>
+      width={100}
+      className='mb-4'
+      height={100}
+      />
       <h3 className="text-charcoalGray text-xl font-bold">Partner 1</h3>
       <p className="text-charcoalGray">A brief description of Partner 1s involvement and contribution to our mission.</p>
     </div>
 
     <div className="flex flex-col items-center bg-neutralWhite p-4 rounded shadow-md">
     <Image src="/partner2.png" alt="Partner 1" 
-      layout='responsive'
+  className='mb-4'
       width={100}
       height={100}
-      className="w-24 h-24 mb-4"/> <h3 className="text-charcoalGray text-xl font-bold">Partner 2</h3>
+      /> <h3 className="text-charcoalGray text-xl font-bold">Partner 2</h3>
       <p className="text-charcoalGray">A brief description of Partner 2s involvement and contribution to our mission.</p>
     </div>
 
     <div className="flex flex-col items-center bg-neutralWhite p-4 rounded shadow-md">
     <Image src="/partner3.png" alt="Partner 1" 
-      layout='responsive'
+       
       width={100}
       height={100}
-      className="w-24 h-24 mb-4"/> <h3 className="text-charcoalGray text-xl font-bold">Partner 3</h3>
+      className='mb-4'/> <h3 className="text-charcoalGray text-xl font-bold">Partner 3</h3>
       <p className="text-charcoalGray">A brief description of Partner 3s involvement and contribution to our mission.</p>
     </div>
   </div>
