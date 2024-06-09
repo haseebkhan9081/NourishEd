@@ -1,7 +1,11 @@
+import Link from 'next/link'
 import React from 'react'
 
 function Logo() {
   return (
+    <Link
+    href={'/'}
+    >
     <div
     className='
     p-2
@@ -19,6 +23,7 @@ function Logo() {
 </p>
  </div>
  </div>
+ </Link>
   )
 }
 
