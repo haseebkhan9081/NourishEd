@@ -131,6 +131,7 @@ text-center'
 onClick={()=>{router.push('/donate')}}
 className='rounded-lg
 mt-8
+animate-pulse
 bg-warmRed'
 >
   Give hope now
@@ -256,7 +257,7 @@ An operations manager who is responsible for overseeing its operations in Pakist
       <h3 className="text-charcoalGray text-xl font-bold">Ibrahim Goth Library Food Support</h3>
       {programsInView && (
               <p className="text-charcoalGray text-3xl font-bold">
-                <CountUp end={120} duration={2.5} separator="," />
+                <CountUp end={120} duration={4} separator="," />
                 +
               </p>
             )}
@@ -267,7 +268,7 @@ An operations manager who is responsible for overseeing its operations in Pakist
       <h3 className="text-charcoalGray text-xl font-bold">Partnerships</h3>
       {programsInView && (
               <p className="text-charcoalGray text-3xl font-bold">
-                <CountUp end={30} duration={2.5} separator="," />
+                <CountUp end={30} duration={4} separator="," />
                 +
               </p>
             )}
@@ -278,7 +279,7 @@ An operations manager who is responsible for overseeing its operations in Pakist
       <h3 className="text-charcoalGray text-xl font-bold">Target Schools</h3>
       {programsInView && (
               <p className="text-charcoalGray text-3xl font-bold">
-                <CountUp end={50} duration={2.5} separator="," />
+                <CountUp end={50} duration={4} separator="," />
                 +
               </p>
             )}
@@ -289,7 +290,7 @@ An operations manager who is responsible for overseeing its operations in Pakist
       <h3 className="text-charcoalGray text-xl font-bold">Nutrition Education</h3>
       {programsInView && (
               <p className="text-charcoalGray text-3xl font-bold">
-                <CountUp end={200} duration={2.5} separator="," />
+                <CountUp end={200} duration={4} separator="," />
                 +
               </p>
             )}
@@ -300,7 +301,7 @@ An operations manager who is responsible for overseeing its operations in Pakist
       <h3 className="text-charcoalGray text-xl font-bold">Infrastructure Development</h3>
       {programsInView && (
               <p className="text-charcoalGray text-3xl font-bold">
-                <CountUp end={10} duration={2.5} separator="," />
+                <CountUp end={10} duration={4} separator="," />
                 
               </p>
             )}
@@ -311,7 +312,7 @@ An operations manager who is responsible for overseeing its operations in Pakist
       <h3 className="text-charcoalGray text-xl font-bold">Policy Advocacy</h3>
       {programsInView && (
               <p className="text-charcoalGray text-3xl font-bold">
-                <CountUp end={5} duration={2.5} separator="," />
+                <CountUp end={5} duration={4} separator="," />
                 +
               </p>
             )}
@@ -322,7 +323,7 @@ An operations manager who is responsible for overseeing its operations in Pakist
       <h3 className="text-charcoalGray text-xl font-bold">Monitoring and Evaluation</h3>
       {programsInView && (
               <p className="text-charcoalGray text-3xl font-bold">
-                <CountUp end={8} duration={2.5} separator="," />
+                <CountUp end={8} duration={4} separator="," />
                 
               </p>
             )}
@@ -333,7 +334,7 @@ An operations manager who is responsible for overseeing its operations in Pakist
       <h3 className="text-charcoalGray text-xl font-bold">Income Generation Support</h3>
       {programsInView && (
               <p className="text-charcoalGray text-3xl font-bold">
-                <CountUp end={150} duration={2.5} separator="," />
+                <CountUp end={150} duration={4} separator="," />
                 +
               </p>
             )}
