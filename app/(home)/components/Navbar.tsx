@@ -27,7 +27,7 @@ const [isLoading,setIsLoading]=useState(false)
     justify-between
     items-center
     p-2
-    
+    shadow-md
     px-8
     flex
     flex-row

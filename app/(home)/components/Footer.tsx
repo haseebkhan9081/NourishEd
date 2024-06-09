@@ -7,7 +7,7 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react
 function Footer() {
   return (
     <div 
-    className='bg-[#EBEBEB]
+    className='bg-white
     p-4
     w-full'>
         

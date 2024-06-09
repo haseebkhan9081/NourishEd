@@ -24,9 +24,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { useRouter } from 'next/navigation'
 
 function Home() {
-
+const router=useRouter()
   const [isShow,setIsShow]=useState(false);
   useEffect(()=>{
 setIsShow(true)
@@ -115,6 +116,7 @@ text-center'
 </p>
 
 <Button
+onClick={()=>{router.push('/donate')}}
 className='rounded-lg
 mt-8
 bg-warmRed'
