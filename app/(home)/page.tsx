@@ -41,7 +41,7 @@ function Home() {
           leaveFrom="translate-y-0 opacity-100"
           leaveTo="translate-y-full opacity-0"
         >
-          <div className='w-full h-full inset-0'>
+          <div className='w-full   h-full  '>
             <CarouslHome onLoad={handleCarouselLoad} />
           </div>
         </Transition>

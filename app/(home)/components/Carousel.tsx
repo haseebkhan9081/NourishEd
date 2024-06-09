@@ -25,7 +25,7 @@ const CarouslHome: React.FC<CarouslHomeProps> = ({ onLoad }) => {
   }, [onLoad]);
 
   return (
-    <div className="h-56 sm:h-64 md:h-[400px] xl:h-[600px] 2xl:h-[700px]">
+    <div className="h-56 relative sm:h-64 md:h-[400px] xl:h-[600px] 2xl:h-[700px]">
       <Carousel
         slideInterval={2000}
         pauseOnHover
