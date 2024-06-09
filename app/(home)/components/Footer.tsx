@@ -1,204 +1,77 @@
 import React from 'react'
 import Logo from './Logo'
-import { Facebook, Instagram, Linkedin, Twitter, Youtube } from 'lucide-react'
-import { Separator } from '@/components/ui/separator'
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa'
-
+import { Mail, Phone } from 'lucide-react'
+import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
 function Footer() {
-  return (
-    <div 
-    className='bg-white
-    p-4
-    w-full'>
+  return ( <footer className="bg-white dark:bg-gray-900">
+    <div className="container px-6 py-12 mx-auto">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
+            <div className="sm:col-span-2">
+                <h1 className="max-w-lg text-xl font-semibold tracking-tight text-gray-800 xl:text-2xl dark:text-white">Subscribe our newsletter to get update.</h1>
+
+                <div className="flex flex-col mx-auto mt-6 space-y-3 md:space-y-0 md:flex-row">
+                    <input id="email" type="text" className="px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" placeholder="Email Address" />
+            
+                    <button className="w-full px-6 py-2.5 text-sm font-medium tracking-wider text-white transition-colors duration-300 transform md:w-auto md:mx-4 focus:outline-none bg-gray-800 rounded-lg hover:bg-gray-700 focus:ring focus:ring-gray-300 focus:ring-opacity-80">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+
+            <div>
+                <p className="font-semibold text-gray-800 dark:text-white">Quick Links</p>
+
+                <div className="flex flex-col items-start mt-5 space-y-2">
+                    <a href="#" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Home</a>
+                    <a href="/aboutus" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Who We Are</a>
+                    <a href="/ourVisionAndMission" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Our Vision & Mission</a>
+                    <a href="/ourVisionAndMission" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Contact us</a>
+                    <a href="/programs" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500 flex-row w-full gap-x-2 flex">Programs</a>
+                    <a href="mailto:donorCare@NourishED.com" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500 flex-row w-full gap-x-2 flex">
+  <Mail/> donorCare@NourishED.com
+</a>
+<a href="tel:+178654321" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500 flex-row w-full gap-x-2 flex">
+  <Phone/> +178654321
+</a>
+
+           
+                </div>
+            </div>
+
+            <div>
+                <p className="font-semibold text-gray-800 dark:text-white">Be a change</p>
+
+                <div className="flex flex-col items-start mt-5 space-y-2">
+                    <a href="#" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Donate online</a>
+                    <a href="#" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Get Involved</a>
+                </div>
+            </div>
+        </div>
         
-        <div
-        className='
-        pt-12
-        flex
-        space-y-8
-        flex-col
-        w-full
-        justify-center
-        items-center
-        h-full'>
+        <hr className="my-6 border-gray-200 md:my-8 dark:border-gray-700"/>
+        
+        <div className="flex items-center justify-between">
+            <a href="#">
+              <Logo/>
+            </a>
+            
+            <div className="flex 
+            justify-center
+            items-center
+            gap-x-2
+            -mx-2">
+                
+<a href="#"><FaFacebook/></a>
+<a href="#"><FaInstagram/></a>
+<a href="#"><FaTwitter/></a>
 
-<Logo/>
-<p
-className='text-xs
-text-[#858787]
-font-light
-text-center'>Nourished is a non profit organisation that strives to eliminate classroom hunger from Pakistan by implementing the Meal Programme
+                 
 
-</p>
-{/* the social media links */}
-<div
-className='flex
-flex-row
-w-full
-justify-center
-items-center
-gap-x-8
-text-[#4CB566]'>
-<FaInstagram
-size={24} />
-<FaLinkedin
-size={24}/>
-<FaFacebook
-size={24}/>
-<FaTwitter
-size={24}/>
-<FaYoutube
-size={24}/>
-
-
-</div>
-       {/* the aditonal links */}
-       <div
-       className='flex
-       p-3
-       md:items-start
-       flex-row
-       justify-center
-       items-center
-       gap-x-24'>
-{/* the first column */}
-<div
-className='
-w-full
-
-flex
-flex-col
-md:flex-row
-space-y-4
-md:space-y-0
-md:gap-x-8'>
-{/*   About US */}
-<div
-
-className='
-flex
-flex-col'
->
- <h6
- className='text-[#626671]
- text-sm
- '>
-    ABOUT US</h6>  
-    <div
-    className='text-xs
-    text-[#626671]
-    mt-4
-    space-y-2'> 
-    <p>About Us</p>
-    <p>Our Vision and Mission</p>
-    <p>Inspiration</p>
-    <p>Board of Trustees</p>
-    <p>Text exemption donation</p>
-    <p>faqs</p>
-    <p>Terms and Conditions</p>
-    </div>
-
-</div>
-{/*   GET INVOLVED */}
-<div
-
-className='
- 
-flex
-flex-col'
->
- <h6
- className='text-[#626671]
- text-sm
- '>
-    GET INVOLVED</h6>  
-    <div
-    className='text-xs
-    text-[#626671]
-    mt-4
-    
-    space-y-2'> 
-    <p>Future Shaper</p>
-     
-    </div>
-
-</div>
-</div>
-{/* second column */}
-<div
-className='
-w-full
-
-flex
-flex-col
-md:flex-row
-space-y-4
- 
-md:space-y-0
-md:gap-x-8'>
-{/*   OUR WORK */}
-<div
-
-className='
-flex
-flex-col'
->
- <h6
- className='text-[#626671]
- text-sm
- '>
-    OUR WORK</h6>  
-    <div
-    className='text-xs
-    text-[#626671]
-    mt-4
-    space-y-2'> 
-    <p>Our Work</p>
-    <p>Feeding For Education</p>
-    <p>Meal Pogram</p>
-     <p>Library Of Ibrahim Goth Meal Support</p>
-    <p>BEyond Meals</p>
-    </div>
-
-</div>
-{/*   DONATE */}
-<div
-
-className='
-flex
-flex-col'
->
- <h6
- className='text-[#626671]
- text-sm
- '>
-   DONATE</h6>  
-    <div
-    className='text-xs
-    text-[#626671]
-    mt-4
-    space-y-2'> 
-    <p>Online Donation</p>
-     
-    </div>
-
-</div>
-</div>
-       </div>
-       <div
-       className='p-4 w-full'>
-       <Separator
-       className='w-full bg-[#90939b]'/>
-       </div>
-       <div>
-       <div className='text-[#626671]'>
-        All Rights Reserved @2024
-       </div>
-       <div className='text-[#626671]'>The NourishEd Foundation</div>
+                
+            </div>
         </div>
-        </div>
-
     </div>
+</footer>
   )
 }
 

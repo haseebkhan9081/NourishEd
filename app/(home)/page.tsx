@@ -69,7 +69,8 @@ setIsShow(true)
 className='flex
 transition duration-300 ease-in-out
 md:p-12
-py-24
+md:py-24
+py-12
 md:px-32
 px-4
 w-full
@@ -130,6 +131,7 @@ bg-warmRed'
 
 {/* impact stories */}
 <div
+
 
 className='bg-lightGray
 md:p-12 
@@ -195,10 +197,8 @@ grid-cols-1
 </div>
 
 {/* how we operate */}
-
 <div className="bg-white p-8 py-20">
   <h2 className="text-charcoalGray text-2xl font-bold mb-6">How we operate</h2>
-
   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
     <div className="bg-neutralWhite p-4 rounded shadow-md">
       <h3 className="text-charcoalGray text-xl font-bold">NourishEd is 501C3</h3>
@@ -236,9 +236,89 @@ An operations manager who is responsible for overseeing its operations in Pakist
     </div>
   </div>
 </div>
+{/* our programs */}
+<div className="bg-coolBlue p-8 py-20">
 
+  <h2 className="text-neutralWhite text-2xl font-bold mb-6">Programs and Initiatives</h2>
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+  <div className="bg-neutralWhite p-4 rounded shadow-md">
+      <h3 className="text-charcoalGray text-xl font-bold">Ibrahim Goth Library Food Support</h3>
+      <p className="text-charcoalGray text-3xl font-bold">120+</p>
+      <p className="text-charcoalGray">Children supported by the Ibrahim Goth Library food program.</p>
+    </div>
+
+    <div className="bg-neutralWhite p-4 rounded shadow-md">
+      <h3 className="text-charcoalGray text-xl font-bold">Partnerships</h3>
+      <p className="text-charcoalGray text-3xl font-bold">30+</p>
+      <p className="text-charcoalGray">Partnerships with local government bodies, NGOs, and corporations.</p>
+    </div>
+
+    <div className="bg-neutralWhite p-4 rounded shadow-md">
+      <h3 className="text-charcoalGray text-xl font-bold">Target Schools</h3>
+      <p className="text-charcoalGray text-3xl font-bold">50+</p>
+      <p className="text-charcoalGray">Target schools and learning centers identified for future inclusion.</p>
+    </div>
+
+    <div className="bg-neutralWhite p-4 rounded shadow-md">
+      <h3 className="text-charcoalGray text-xl font-bold">Nutrition Education</h3>
+      <p className="text-charcoalGray text-3xl font-bold">200+</p>
+      <p className="text-charcoalGray">Nutrition education programs for parents and teachers.</p>
+    </div>
+
+    <div className="bg-neutralWhite p-4 rounded shadow-md">
+      <h3 className="text-charcoalGray text-xl font-bold">Infrastructure Development</h3>
+      <p className="text-charcoalGray text-3xl font-bold">10</p>
+      <p className="text-charcoalGray">Kitchen build-outs and distribution logistics established.</p>
+    </div>
+
+    <div className="bg-neutralWhite p-4 rounded shadow-md">
+      <h3 className="text-charcoalGray text-xl font-bold">Policy Advocacy</h3>
+      <p className="text-charcoalGray text-3xl font-bold">5+</p>
+      <p className="text-charcoalGray">Policies advocated at local, regional, and national levels.</p>
+    </div>
+
+    <div className="bg-neutralWhite p-4 rounded shadow-md">
+      <h3 className="text-charcoalGray text-xl font-bold">Monitoring and Evaluation</h3>
+      <p className="text-charcoalGray text-3xl font-bold">8</p>
+      <p className="text-charcoalGray">Mechanisms established to track progress and identify improvements.</p>
+    </div>
+
+    <div className="bg-neutralWhite p-4 rounded shadow-md">
+      <h3 className="text-charcoalGray text-xl font-bold">Income Generation Support</h3>
+      <p className="text-charcoalGray text-3xl font-bold">150+</p>
+      <p className="text-charcoalGray">Parents supported through vocational training programs.</p>
+    </div>
+  </div>
+</div>
+{/* donate Now */}
+<div
+className='flex
+py-12
+flex-col
+w-full
+
+justify-center
+items-center
+space-y-4
+md:py-20
+p-4
+rounded-lg'>
+<h1
+className='text-2xl
+md:text-4xl
+text-warmGreen
+font-bold
+'>A Meal Is Hope. Will You Help?</h1>
+<p
+className='text-charcoalGray'>Your tax deductible donation can transform  childrens lives</p>
+<Button
+onClick={()=>{
+  router.push('/donate')
+}}
+className='bg-warmRed'
+>Donate now</Button>
+</div>
 {/* statistics */}
-
 <div className="bg-warmGreen p-8 py-20">
   <h2 className="text-neutralWhite text-2xl font-bold mb-6">Statistics and Facts</h2>
 
@@ -264,7 +344,9 @@ An operations manager who is responsible for overseeing its operations in Pakist
 </div>
 
 {/* our partners */}
-<div className="bg- p-8">
+<div className="bg-white
+py-20 
+p-8">
   <h2 className="text-charcoalGray text-2xl font-bold mb-6">Our Partners</h2>
 
   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -305,7 +387,8 @@ An operations manager who is responsible for overseeing its operations in Pakist
 
 <div className="bg-warmOrange p-8 py-20">
 
-  <h2 className="text-charcoalGray text-2xl font-bold mb-6">How You Can Help</h2>
+
+  <h2 className="text-white text-2xl font-bold mb-6">How You Can Help</h2>
 
   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
     <div className="bg-neutralWhite p-4 rounded shadow-md">
