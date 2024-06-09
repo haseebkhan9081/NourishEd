@@ -24,9 +24,20 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import CountUp from 'react-countup';
 import { useRouter } from 'next/navigation'
-
+import { useInView } from 'react-intersection-observer';
 function Home() {
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Ensure the animation runs only once
+    threshold: 0.1, // Adjust based on when you want the animation to trigger
+  });
+
+  const { ref: programsRef, inView: programsInView } = useInView({
+    triggerOnce: true, // Ensure the animation runs only once
+    threshold: 0.1, // Adjust based on when you want the animation to trigger
+  });
+
 const router=useRouter()
   const [isShow,setIsShow]=useState(false);
   useEffect(()=>{
@@ -237,55 +248,95 @@ An operations manager who is responsible for overseeing its operations in Pakist
   </div>
 </div>
 {/* our programs */}
-<div className="bg-coolBlue p-8 py-20">
+<div ref={programsRef} className="bg-coolBlue p-8 py-20">
 
   <h2 className="text-neutralWhite text-2xl font-bold mb-6">Programs and Initiatives</h2>
   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
   <div className="bg-neutralWhite p-4 rounded shadow-md">
       <h3 className="text-charcoalGray text-xl font-bold">Ibrahim Goth Library Food Support</h3>
-      <p className="text-charcoalGray text-3xl font-bold">120+</p>
+      {programsInView && (
+              <p className="text-charcoalGray text-3xl font-bold">
+                <CountUp end={120} duration={2.5} separator="," />
+                +
+              </p>
+            )}
       <p className="text-charcoalGray">Children supported by the Ibrahim Goth Library food program.</p>
     </div>
 
     <div className="bg-neutralWhite p-4 rounded shadow-md">
       <h3 className="text-charcoalGray text-xl font-bold">Partnerships</h3>
-      <p className="text-charcoalGray text-3xl font-bold">30+</p>
+      {programsInView && (
+              <p className="text-charcoalGray text-3xl font-bold">
+                <CountUp end={30} duration={2.5} separator="," />
+                +
+              </p>
+            )}
       <p className="text-charcoalGray">Partnerships with local government bodies, NGOs, and corporations.</p>
     </div>
 
     <div className="bg-neutralWhite p-4 rounded shadow-md">
       <h3 className="text-charcoalGray text-xl font-bold">Target Schools</h3>
-      <p className="text-charcoalGray text-3xl font-bold">50+</p>
+      {programsInView && (
+              <p className="text-charcoalGray text-3xl font-bold">
+                <CountUp end={50} duration={2.5} separator="," />
+                +
+              </p>
+            )}
       <p className="text-charcoalGray">Target schools and learning centers identified for future inclusion.</p>
     </div>
 
     <div className="bg-neutralWhite p-4 rounded shadow-md">
       <h3 className="text-charcoalGray text-xl font-bold">Nutrition Education</h3>
-      <p className="text-charcoalGray text-3xl font-bold">200+</p>
+      {programsInView && (
+              <p className="text-charcoalGray text-3xl font-bold">
+                <CountUp end={200} duration={2.5} separator="," />
+                +
+              </p>
+            )}
       <p className="text-charcoalGray">Nutrition education programs for parents and teachers.</p>
     </div>
 
     <div className="bg-neutralWhite p-4 rounded shadow-md">
       <h3 className="text-charcoalGray text-xl font-bold">Infrastructure Development</h3>
-      <p className="text-charcoalGray text-3xl font-bold">10</p>
+      {programsInView && (
+              <p className="text-charcoalGray text-3xl font-bold">
+                <CountUp end={10} duration={2.5} separator="," />
+                
+              </p>
+            )}
       <p className="text-charcoalGray">Kitchen build-outs and distribution logistics established.</p>
     </div>
 
     <div className="bg-neutralWhite p-4 rounded shadow-md">
       <h3 className="text-charcoalGray text-xl font-bold">Policy Advocacy</h3>
-      <p className="text-charcoalGray text-3xl font-bold">5+</p>
+      {programsInView && (
+              <p className="text-charcoalGray text-3xl font-bold">
+                <CountUp end={5} duration={2.5} separator="," />
+                +
+              </p>
+            )}
       <p className="text-charcoalGray">Policies advocated at local, regional, and national levels.</p>
     </div>
 
     <div className="bg-neutralWhite p-4 rounded shadow-md">
       <h3 className="text-charcoalGray text-xl font-bold">Monitoring and Evaluation</h3>
-      <p className="text-charcoalGray text-3xl font-bold">8</p>
+      {programsInView && (
+              <p className="text-charcoalGray text-3xl font-bold">
+                <CountUp end={8} duration={2.5} separator="," />
+                
+              </p>
+            )}
       <p className="text-charcoalGray">Mechanisms established to track progress and identify improvements.</p>
     </div>
 
     <div className="bg-neutralWhite p-4 rounded shadow-md">
       <h3 className="text-charcoalGray text-xl font-bold">Income Generation Support</h3>
-      <p className="text-charcoalGray text-3xl font-bold">150+</p>
+      {programsInView && (
+              <p className="text-charcoalGray text-3xl font-bold">
+                <CountUp end={150} duration={2.5} separator="," />
+                +
+              </p>
+            )}
       <p className="text-charcoalGray">Parents supported through vocational training programs.</p>
     </div>
   </div>
@@ -319,29 +370,42 @@ className='bg-warmRed'
 >Donate now</Button>
 </div>
 {/* statistics */}
-<div className="bg-warmGreen p-8 py-20">
-  <h2 className="text-neutralWhite text-2xl font-bold mb-6">Statistics and Facts</h2>
+<div ref={ref} className="bg-warmGreen p-8 py-20">
+      <h2 className="text-neutralWhite text-2xl font-bold mb-6">Statistics and Facts</h2>
 
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-    <div className="bg-neutralWhite p-4 rounded shadow-md">
-      <h3 className="text-charcoalGray text-xl font-bold">Meals Served</h3>
-      <p className="text-charcoalGray text-3xl font-bold">1,000,000+</p>
-      <p className="text-charcoalGray">Nutritious meals served to children in need.</p>
-    </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="bg-neutralWhite p-4 rounded shadow-md">
+          <h3 className="text-charcoalGray text-xl font-bold">Meals Served</h3>
+          {inView && (
+            <p className="text-charcoalGray text-3xl font-bold">
+              <CountUp end={1000000} duration={2.5} separator="," />
+              +
+            </p>
+          )}
+          <p className="text-charcoalGray">Nutritious meals served to children in need.</p>
+        </div>
 
-    <div className="bg-neutralWhite p-4 rounded shadow-md">
-      <h3 className="text-charcoalGray text-xl font-bold">Attendance</h3>
-      <p className="text-charcoalGray text-3xl font-bold">95%</p>
-      <p className="text-charcoalGray">Increase in school attendance rates.</p>
-    </div>
+        <div className="bg-neutralWhite p-4 rounded shadow-md">
+          <h3 className="text-charcoalGray text-xl font-bold">Attendance</h3>
+          {inView && (
+            <p className="text-charcoalGray text-3xl font-bold">
+              <CountUp end={95} duration={2.5} suffix="%" />
+            </p>
+          )}
+          <p className="text-charcoalGray">Increase in school attendance rates.</p>
+        </div>
 
-    <div className="bg-neutralWhite p-4 rounded shadow-md">
-      <h3 className="text-charcoalGray text-xl font-bold">Health Benefits</h3>
-      <p className="text-charcoalGray text-3xl font-bold">80%</p>
-      <p className="text-charcoalGray">Improvement in childrens health and nutrition.</p>
+        <div className="bg-neutralWhite p-4 rounded shadow-md">
+          <h3 className="text-charcoalGray text-xl font-bold">Health Benefits</h3>
+          {inView && (
+            <p className="text-charcoalGray text-3xl font-bold">
+              <CountUp end={80} duration={2.5} suffix="%" />
+            </p>
+          )}
+          <p className="text-charcoalGray">Improvement in childrens health and nutrition.</p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
 {/* our partners */}
 <div className="bg-white
