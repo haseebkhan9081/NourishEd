@@ -83,10 +83,7 @@ items-center
 justify-center
 '>
     <p className='xl:text-base text-sm'>Home</p>
-     <Home
-      className='w-4
-       
-      h-4'   /></div></Link>           
+     </div></Link>           
 
 <Link
 
@@ -104,10 +101,7 @@ gap-x-2
 justify-center
 '>
     <p className='xl:text-base text-base'>About Us</p>
-     <Info
-      className='w-4
-       
-      h-4'/></div>
+      </div>
 </Link>
      
     <Link
@@ -126,10 +120,7 @@ items-center
 justify-center
 '>
     <p className='xl:text-base text-sm'>Our Vision & Mission </p>
-     <EyeIcon
-     className='w-4
-      
-     h-4'/></div></Link>
+     </div></Link>
 
      <Link
     className={clsx(
@@ -147,10 +138,7 @@ items-center
 justify-center
 '>
     <p className='xl:text-base  text-sm'>Programs</p>
-     <Clipboard
-     className='w-4
-      
-     h-4'/></div>
+     </div>
      </Link>
 
 
@@ -169,10 +157,7 @@ gap-x-2
 justify-center
 '>
     <p className='xl:text-base text-sm'>Get Involved</p>
-     <UserPlus
-     className='w-4
-     
-     h-4'/></div>
+     </div>
     </Link>    
     
     <Link
@@ -214,9 +199,7 @@ items-center
 justify-center
 '>
     <p className='xl:text-base text-sm'>Contact Us</p>
-     <Phone
-     className='w-4
-     h-4'/></div> 
+      </div> 
  </Link> 
         </div>
 
