@@ -11,10 +11,10 @@ export default function CarouslHome() {
   return (
     <div className="h-56 sm:h-64 md:h-[400px] xl:h-[600px] 2xl:h-[700px]  ">
       <Carousel
-      leftControl
-      rightControl
+     
       slideInterval={2000}
       pauseOnHover className="w-full
+      
       h-full">
  
 
@@ -22,6 +22,7 @@ export default function CarouslHome() {
       {images.map((image,index)=>(
       <div
       className="w-full
+       
       h-full"
       key={index}
       >      <Image
@@ -52,8 +53,7 @@ export default function CarouslHome() {
       size={"lg"}
       
       className=" 
-      bg-green-600
-
+      bg-[#4CB566]
       opacity-100
       bottom-0
       flex

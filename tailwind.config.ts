@@ -20,6 +20,17 @@ const config = {
       },
     },
     extend: {
+      colors: {
+        warmGreen: '#4CB566',
+        softYellow: '#FAD02E',
+        neutralWhite: '#FFFFFF',
+        warmOrange: '#F39C12',
+        coolBlue: '#3498DB',
+        charcoalGray: '#2C3E50',
+        lightGray: '#ECF0F1',
+        warmRed: '#E74C3C',
+      }
+      ,
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

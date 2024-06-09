@@ -44,7 +44,7 @@ fixed
 <main
 
 className='
-bg-[#E6F3FF]
+
 overflow-hidden
 flex
 flex-col

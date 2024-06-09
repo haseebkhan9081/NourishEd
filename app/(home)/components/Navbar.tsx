@@ -236,7 +236,8 @@ justify-center
       router.push('/donate')
       setIsLoading(false) 
      }}
-     className='bg-green-600
+     className='bg-[#4CB566]
+     
      w-24
      h-9
      '
