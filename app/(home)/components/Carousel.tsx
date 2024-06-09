@@ -19,13 +19,13 @@ const CarouslHome: React.FC<CarouslHomeProps> = ({ onLoad }) => {
     // Simulate loading time before calling onLoad
     const timer = setTimeout(() => {
       onLoad();
-    }, 100); // Adjust the delay as necessary
+    }, 1000); // Adjust the delay as necessary
 
     return () => clearTimeout(timer);
   }, [onLoad]);
 
   return (
-    <div className="h-56 relative sm:h-64 md:h-[400px] xl:h-[600px] 2xl:h-[700px]">
+    <div className="h-56 sm:h-64 md:h-[400px] xl:h-[600px] 2xl:h-[700px]">
       <Carousel
         slideInterval={2000}
         pauseOnHover
@@ -36,8 +36,9 @@ const CarouslHome: React.FC<CarouslHomeProps> = ({ onLoad }) => {
             <Image
               src={image.src}
               alt={`Image ${index + 1}`}
-              layout="fill"
-              objectFit="cover"
+              width={100}
+              height={100}
+              layout="responsive"
               className="object-cover z-30"
             />
             <div className="absolute inset-0 flex justify-center bg-black/25 opacity-0 hover:opacity-100 hover:transition hover:ease-in hover:duration-300 items-center h-full w-full">
