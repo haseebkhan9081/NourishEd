@@ -19,13 +19,13 @@ const CarouslHome: React.FC<CarouslHomeProps> = ({ onLoad }) => {
     // Simulate loading time before calling onLoad
     const timer = setTimeout(() => {
       onLoad();
-    }, 1000); // Adjust the delay as necessary
+    }, 100); // Adjust the delay as necessary
 
     return () => clearTimeout(timer);
   }, [onLoad]);
 
   return (
-    <div className="h-56 sm:h-64 md:h-[400px] xl:h-[600px] 2xl:h-[700px]">
+    <div className="h-44   md:h-[400px] xl:h-[600px] 2xl:h-[700px]">
       <Carousel
         slideInterval={2000}
         pauseOnHover

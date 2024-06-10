@@ -8,6 +8,7 @@ function PowerOfaMeal() {
   return (
     <div
 className='flex
+ 
 transition duration-300 ease-in-out
 md:p-12
 md:py-24
@@ -47,7 +48,7 @@ text-warmGreen
 text-3xl
 
 font-bold
-
+text-center
 mb-4'
 >The Power of a Meal</h2>
 <p

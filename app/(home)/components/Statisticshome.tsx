@@ -16,7 +16,7 @@ function Statisticshome() {
           <h3 className="text-charcoalGray text-xl font-bold">Meals Served</h3>
           {inView && (
             <p className="text-charcoalGray text-3xl font-bold">
-              <CountUp end={1000000} duration={2.5} separator="," />
+              <CountUp end={1000000} duration={4} separator="," />
               +
             </p>
           )}
@@ -27,7 +27,7 @@ function Statisticshome() {
           <h3 className="text-charcoalGray text-xl font-bold">Attendance</h3>
           {inView && (
             <p className="text-charcoalGray text-3xl font-bold">
-              <CountUp end={95} duration={2.5} suffix="%" />
+              <CountUp end={95} duration={4} suffix="%" />
             </p>
           )}
           <p className="text-charcoalGray">Increase in school attendance rates.</p>
@@ -37,7 +37,7 @@ function Statisticshome() {
           <h3 className="text-charcoalGray text-xl font-bold">Health Benefits</h3>
           {inView && (
             <p className="text-charcoalGray text-3xl font-bold">
-              <CountUp end={80} duration={2.5} suffix="%" />
+              <CountUp end={80} duration={4} suffix="%" />
             </p>
           )}
           <p className="text-charcoalGray">Improvement in childrens health and nutrition.</p>

@@ -79,8 +79,15 @@ flex-row
 h-full
 w-full
 gap-x-2
+p-2
 items-center
 justify-center
+ hover:bg-warmGreen
+ rounded-md
+ hover:text-white
+ transition 
+ ease-in 
+ duration-300
 '>
     <p className='xl:text-base text-sm'>Home</p>
      </div></Link>           
@@ -88,7 +95,7 @@ justify-center
 <Link
 
 className={clsx(
-    pathname.includes('aboutus')&&'border-b-2 border-[#4CB566] transition ease-in duration-300'
+    pathname.includes('aboutus')&&'border-b-2 border-warmGreen transition ease-in duration-300'
  )}
 href={'/aboutus'}>
 <div 
@@ -99,6 +106,13 @@ w-full
 items-center
 gap-x-2
 justify-center
+hover:bg-warmGreen
+ rounded-md
+ hover:text-white
+ transition 
+ ease-in 
+ p-2
+ duration-300
 '>
     <p className='xl:text-base text-base'>About Us</p>
       </div>
@@ -118,6 +132,13 @@ w-full
 gap-x-2
 items-center
 justify-center
+hover:bg-warmGreen
+p-2
+ rounded-md
+ hover:text-white
+ transition 
+ ease-in 
+ duration-300
 '>
     <p className='xl:text-base text-sm'>Our Vision & Mission </p>
      </div></Link>
@@ -136,6 +157,13 @@ w-full
 gap-x-2
 items-center
 justify-center
+hover:bg-warmGreen
+ rounded-md
+ hover:text-white
+ transition 
+ ease-in 
+ p-2
+ duration-300
 '>
     <p className='xl:text-base  text-sm'>Programs</p>
      </div>
@@ -155,6 +183,13 @@ w-full
 items-center
 gap-x-2
 justify-center
+hover:bg-warmGreen
+ rounded-md
+ hover:text-white
+ transition 
+ ease-in 
+ duration-300
+ p-2
 '>
     <p className='xl:text-base text-sm'>Get Involved</p>
      </div>
@@ -174,6 +209,13 @@ w-full
 gap-x-2
 items-center
 justify-center
+hover:bg-warmGreen
+ rounded-md
+ hover:text-white
+ transition 
+ ease-in 
+ p-2
+ duration-300
 '>
     <p className='xl:text-base text-sm'>Donate</p>
      <Heart
@@ -197,6 +239,13 @@ w-full
 gap-x-2
 items-center
 justify-center
+hover:bg-warmGreen
+ rounded-md
+ hover:text-white
+ transition 
+ ease-in 
+ p-2
+ duration-300
 '>
     <p className='xl:text-base text-sm'>Contact Us</p>
       </div> 
