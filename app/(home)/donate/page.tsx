@@ -8,7 +8,7 @@ function Donate() {
 setIsShow(true)
  },[])
   return (
-   <Transition
+    <div>   <Transition
    appear={true}
    show={isShow}
    enter="transform transition duration-1000"
@@ -20,7 +20,8 @@ setIsShow(true)
  >
 <div>Donate</div>
  </Transition>
-    
+ </div>
+
   )
 }
 

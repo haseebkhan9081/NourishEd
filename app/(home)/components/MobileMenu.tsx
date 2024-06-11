@@ -74,22 +74,7 @@ justify-center
       </div>
 </Link>
      
-    <Link
-    onClick={()=>setIsOpen(false)}
-    className={clsx(
-        pathname.includes('ourVisionAndMission')&&'border-b-2 border-[#4CB566] transition ease-in duration-300'
-     )}
-    href={'/ourVisionAndMission'}>
-    <div 
-className='flex
-flex-row
-h-full
-w-full
-gap-x-2
-justify-center
-'>
-    <p className='text-lg'>Our Vision & Mission</p>
-    </div></Link>
+    
 
      <Link
      onClick={()=>setIsOpen(false)}

@@ -52,12 +52,13 @@ function Home() {
           <PowerOfaMeal />
           <ImpactStorieshome />
           <HowWeOperate />
+
           <ProgramsInitiativesHome />
           <div className='flex py-12 flex-col w-full justify-center items-center space-y-4 md:py-20 p-4 rounded-lg'>
-            <h1 className='text-2xl md:text-4xl text-warmGreen font-bold'>
+            <h1 className='text-2xl text-center md:text-4xl text-warmGreen font-bold'>
               A Meal Is Hope. Will You Help?
             </h1>
-            <p className='text-charcoalGray'>
+            <p className='text-charcoalGray text-center'>
               Your tax deductible donation can transform childrens lives
             </p>
             <Button

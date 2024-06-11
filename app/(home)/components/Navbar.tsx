@@ -118,30 +118,7 @@ hover:bg-warmGreen
       </div>
 </Link>
      
-    <Link
-    
-    className={clsx(
-        pathname.includes('ourVisionAndMission')&&'border-b-2 border-[#4CB566] transition ease-in duration-300'
-     )}
-    href={'/ourVisionAndMission'}>
-    <div 
-className='flex
-flex-row
-h-full
-w-full
-gap-x-2
-items-center
-justify-center
-hover:bg-warmGreen
-p-2
- rounded-md
- hover:text-white
- transition 
- ease-in 
- duration-300
-'>
-    <p className='xl:text-base text-sm'>Our Vision & Mission </p>
-     </div></Link>
+   
 
      <Link
     className={clsx(

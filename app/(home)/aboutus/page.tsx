@@ -16,7 +16,6 @@ setIsShow(true)
   
 <div
 className='w-full
-py-12
 h-full
 flex-col
 space-y-8
@@ -34,12 +33,9 @@ items-center
           leaveFrom="translate-y-0 opacity-100"
           leaveTo="translate-y-full opacity-0"
         >
- <h1
- className='text-center
- text-4xl
- 
- '
- >About Us</h1>
+ <div className='hero-section bg-cover bg-center h-64 lg:h-[500px] flex items-center justify-center' style={{ backgroundImage: 'url(/hero-background-about-us.png)' }}>
+      <h1 className='text-white text-4xl'>About us</h1>
+      </div>
 
         </Transition>
 
