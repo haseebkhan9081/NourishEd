@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -6,23 +7,12 @@ function Logo() {
     <Link
     href={'/'}
     >
-    <div
-    className='
-    p-2
-    flex
-    flex-col
-    text-center
-    '>
-
-
- <div
- className=' text-[#4CB566]'>
-  <p className='text-2xl font-bold'>NourishEd</p>  
-    <p
-    className='text-[8px] text-slate-700'>Eradicating hunger from Classrooms in Pakistan
-</p>
- </div>
- </div>
+    <Image
+    src={'/Logo.png'}
+    alt='logo'
+    width={150}
+   height={1}
+    />
  </Link>
   )
 }

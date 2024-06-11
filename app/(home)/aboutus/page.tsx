@@ -2,60 +2,16 @@
 import { Transition } from '@headlessui/react'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+
 import ImpactStorieshome from '../components/ImpactStorieshome'
+import LeadershipandTeam from './components/LeadershipandTeam'
 function AboutUs() {
  const [isShow,setIsShow]=useState(false)
  useEffect(()=>{
 setIsShow(true)
  },[])
 
- const profiles=[
-  {img:'team.png',
-    name:' Faisal Hussain',
-    position:'BOD'
-  },
-  {img:'team2.png',
-    name:' Saima Ismail',
-    position:'BOD'
-  }
-  ,
-  {img:'team.png',
-    name:' Fawad Ahmed',
-    position:'BOD'
-  },
-  {img:'team.png',
-    name:' Khurram Ismail',
-    position:'BOD'
-  },
-  {img:'team.png',
-    name:' Khurram Ismail',
-    position:'Press'
-  },
-  {img:'team.png',
-    name:' Raheel Merchant',
-    position:'Treasurer'
-  },
-  {img:'team.png',
-    name:' Faisal Hussain',
-    position:'BOD'
-  },
-  {img:'team.png',
-    name:' yasir Salim',
-    position:'Secretary'
-  },
-  {img:'team.png',
-    name:'Ali Tahir',
-    position:'Ops Manager NourishED Pak'
-  }
- ]
+ 
   return (
   
 <div
@@ -88,8 +44,6 @@ items-center
         </Transition>
 
 <div className="bg-warmGreen p-8 py-20">
-
-
   <h2 className="text-white text-2xl font-bold mb-6">Our Mission and Vision</h2>
   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
     <div className="bg-neutralWhite p-4 rounded shadow-md">
@@ -136,65 +90,11 @@ Our story is one of hope, perseverance, and the unwavering belief that together,
   </div>
 </div>
 
-<div   className=" bg-warmGreen p-8 py-20">
 
-      <h2 className="text-neutralWhite text-2xl font-bold mb-6">Leadership Team</h2>
-<div
-className='grid grid-cols-2
-gap-4
-xl:grid-cols-6
-md:grid-cols-4'
->
-  {profiles?.map((profile,index)=>(
-    <Card
-key={index}
-className=' 
-'
-
->
-<CardHeader>
-  <CardTitle
-  className='justify-center
-  items-center
-  w-full
-  flex
-  flex-col
-  '>
-    <Image
-  src={'/'+profile.img}
-  alt=''
-  
-  width={100}
-  height={100}
-
-  /></CardTitle>
-
-</CardHeader>
- 
-<CardFooter
-className='justify-center
-items-center
-flex-col
-flex'>
-<div
-className='text-center'>
-{profile.name} </div>
-<div
-className='text-center'>{profile?.position}</div>
-</CardFooter>
-</Card>
-  ))}
-      
-     
-    </div>
-        
-
-         
-      </div>
 
      
 
-
+<LeadershipandTeam/>
 
       
     </div>
