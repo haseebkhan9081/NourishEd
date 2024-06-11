@@ -34,7 +34,8 @@ items-center
           leaveTo="translate-y-full opacity-0"
         >
  <div className='hero-section bg-cover bg-center h-64 lg:h-[500px] flex items-center justify-center' style={{ backgroundImage: 'url(/hero-background-about-us.png)' }}>
-      <h1 className='text-white text-4xl'>About us</h1>
+ <div className="absolute inset-0 bg-black opacity-50"></div>
+      <h1 className='text-white z-10 text-4xl'>About us</h1>
       </div>
 
         </Transition>
