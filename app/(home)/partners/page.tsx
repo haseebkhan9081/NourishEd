@@ -1,4 +1,5 @@
 "use client"
+import { Transition } from '@headlessui/react';
 import axios from 'axios';
 import { Loader2 } from 'lucide-react';
 import Image from 'next/image'
@@ -34,7 +35,18 @@ function OurPartners() {
     <div className="bg-warmGreen
 py-20 
 p-8">
-  <h2 className="text-white text-center text-4xl font-bold mb-6">Our Partners</h2>
+  <Transition
+   appear={true}
+   show={true}
+   enter="transform transition duration-1000"
+   enterFrom="translate-y-full opacity-0"
+   enterTo="translate-y-0 opacity-100"
+   leave="transform transition duration-1000"
+   leaveFrom="translate-y-0 opacity-100"
+   leaveTo="translate-y-full opacity-0"
+ >
+<div> <h2 className="text-white text-center text-4xl font-bold mb-6">Our Partners</h2></div></Transition>
+ 
   {isDataLoading&&
   <div
   className='justify-center
