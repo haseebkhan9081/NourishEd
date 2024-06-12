@@ -6,42 +6,42 @@ interface Option {
   label: string;
 }
 
-const daysOfWeek: Option[] = [
+const timesOfDay: Option[] = [
   { value: 'Morning', label: 'Morning' },
   { value: 'Afternoon', label: 'Afternoon' },
   { value: 'Evening', label: 'Evening' },
  
 ];
 
-interface DayPickerProps{
-    days:string[],
-    setDays:(days:string[])=>void;
+interface Timepickerprops{
+  times:string[],
+  settimes:(days:string[])=>void;
 }
 
-const DayPicker: React.FC<DayPickerProps> = ({
-    days,
-    setDays
+const Timepicker: React.FC<Timepickerprops> = ({
+    times,
+    settimes
 }) => {
-  const [selectedDays, setSelectedDays] = useState<string[]>(days);
+  const [selectedDays, setSelectedDays] = useState<string[]>(times);
 
   const handleChange = (selectedOptions: readonly Option[], actionMeta: ActionMeta<Option>) => {
 
     if (selectedOptions) {
       setSelectedDays((selectedOptions as Option[]).map(option => option.value));
-      setDays((selectedOptions as Option[]).map(option => option.value))
+      settimes((selectedOptions as Option[]).map(option => option.value))
     } else {
       setSelectedDays([]);
-      setDays([])
+      settimes([])
     }
   };
 
   return (
     <div>
-      <h2>Day Picker</h2>
+   
       <Select
         isMulti
-        options={daysOfWeek}
-        value={daysOfWeek.filter(option => selectedDays.includes(option.value))}
+        options={timesOfDay}
+        value={timesOfDay.filter(option => selectedDays.includes(option.value))}
         onChange={handleChange}
       />
      
@@ -49,4 +49,4 @@ const DayPicker: React.FC<DayPickerProps> = ({
   );
 }
 
-export default DayPicker;
+export default Timepicker;

@@ -40,7 +40,6 @@ const DayPicker: React.FC<DayPickerProps> = ({
 
   return (
     <div>
-      <h2>Day Picker</h2>
       <Select
         isMulti
         options={daysOfWeek}
