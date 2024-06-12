@@ -7,7 +7,7 @@ function PowerOfaMeal() {
     const router=useRouter()
   return (
     <div
-className='flex
+className=' 
  
 transition duration-300 ease-in-out
 md:p-12

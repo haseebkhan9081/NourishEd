@@ -1,6 +1,8 @@
 "use client"
+import { Button } from '@/components/ui/button';
 import axios from 'axios';
 import { ChevronLeft, Loader2 } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 // Import the useRouter hook from 'next/router'
 import { useRouter } from 'next/navigation';
@@ -93,7 +95,70 @@ setProgramData(response.data)
 
 
       {/* Render the id or any other component based on the id */}
-      <h1>Program ID: {params.id}</h1>
+      <div
+className=' 
+ bg-warmGreen
+transition duration-300 ease-in-out
+md:p-12
+md:py-24
+py-12
+md:px-32
+px-4
+w-full
+
+h-full
+grid
+md:grid-cols-2
+grid-cols-1
+ gap-4
+ md:flex-row
+ md:justify-between
+
+ 
+'>
+<Image
+src={programData?.image||""}
+alt={programData?.title||""}
+width={100}
+height={100}
+layout='responsive'
+className='rounded-sm'
+/>
+<div
+className='flex
+transition duration-300 ease-in-out
+justify-center
+items-center
+p-6
+flex-col
+w-full'>
+<h2
+className='
+text-white
+text-3xl
+
+font-bold
+text-center
+mb-4'
+>{programData?.title}</h2>
+<p
+className='text-charcoalGray
+text-center'
+> {programData?.longDescription}
+</p>
+
+<Button
+onClick={()=>{router.push('/donate')}}
+className='rounded-lg
+mt-8
+animate-pulse
+bg-warmRed'
+>
+  Support this program
+</Button>
+
+</div>
+</div>
     </div>
   );
 };
