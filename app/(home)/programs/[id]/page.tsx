@@ -1,20 +1,41 @@
 "use client"
+import axios from 'axios';
 import { ChevronLeft, Loader2 } from 'lucide-react';
 import Link from 'next/link';
 // Import the useRouter hook from 'next/router'
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
-
-// Define your functional component
+import { useEffect, useState } from 'react';
+interface Program {
+  id:number;
+  title: string;
+  count:number;
+  longDescription:string;
+  description: string;
+  image: string;
+}
+ 
 const Page = ({params}:{params:{id:number}}) => {
   // Call the useRouter hook to get access to router information
    
   const [isLoading,setIsLoading]=useState(false)
+  const [isDataLoading,setIsDataLoading]=useState(false);
+const [programData,setProgramData]=useState<Program>()
 
-  // Access the id parameter from the router object
+  useEffect(()=>{
+setIsDataLoading(true);
+
+axios.post("/api/programs",{id:params.id}).then((response)=>{
+setProgramData(response.data)
+}).catch((err)=>{
+  console.log("err at /prpgrams/id",err)
+}).finally(()=>{
+  setIsDataLoading(false)
+})
+  },[params.id])
+ 
   const router=useRouter()
 
-  // Render the id or any other component based on the id
+  
   
   
   return (
@@ -59,6 +80,18 @@ const Page = ({params}:{params:{id:number}}) => {
                 '
                 />:"Back"}</p></Link>
         </div>
+        {isDataLoading&&
+  <div
+  className='justify-center
+  items-center
+  text-warmGreen
+  w-full
+  flex'>  <Loader2
+  className='animate-spin
+  '
+  /></div>}
+
+
       {/* Render the id or any other component based on the id */}
       <h1>Program ID: {params.id}</h1>
     </div>
