@@ -53,10 +53,9 @@ font-bold'
   {volunteerform?"Cancel":"Sign Up to Volunteer"}
    </Button>
 {volunteerform&&
-
- 
- 
-  <VolunteerForm/>
+  <VolunteerForm
+  setState={setVolunteerForm}
+  />
  
 
  

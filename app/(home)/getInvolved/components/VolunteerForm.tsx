@@ -18,6 +18,8 @@ import DayPicker from "./Daypicker"
 import Timepicker from "./TimePicker"
 import Rolepicker from "./RolePicker"
 import { Textarea } from "@/components/ui/textarea"
+import { useState } from "react"
+import { toast } from "sonner"
 
 const formSchema = z.object({
   
@@ -33,7 +35,7 @@ EmailAddress: z.string().min(2, "Email address must be at least 2 characters lon
 PhoneNumber: z.string().min(2, "Phone number must be at least 11 characters long").max(50, "Phone number cannot exceed 50 characters"),
 
 // Validation messages for Days array
-Days: z.array(z.string()).min(2, "Please select at least 2 days").max(7, "You cannot select more than 7 days"),
+Days: z.array(z.string()).min(1, "Please select at least 1 day").max(7, "You cannot select more than 7 days"),
 
 // Validation messages for Times array
 Times: z.array(z.string()).min(1, "Times   cannot be empty").max(3, "You cannot select more than 3 times"),
@@ -55,7 +57,11 @@ Comments: z.string().max(150, "Comments cannot exceed 150 characters").optional(
 
 })
 
-function VolunteerForm() {
+interface volunteerformProps{
+    setState:(v:boolean)=>void
+}
+
+const VolunteerForm:React.FC<volunteerformProps>=({setState})=> {
 
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
@@ -75,9 +81,13 @@ function VolunteerForm() {
         // Do something with the form values.
         // ✅ This will be type-safe and validated.
         console.log(values)
+        setIsSubmitted(true)
+        setState(false)
+        toast.success("Your form was submitted successfully!")
       }
-  return  (
-    <Form
+      const [submitted,setIsSubmitted]=useState(false)
+  return (
+<Form
     {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8
       z-10
@@ -249,6 +259,10 @@ flex">
       </form>
     </Form>
   )
+   
+   
+    
+  
 }
 
 export default VolunteerForm
