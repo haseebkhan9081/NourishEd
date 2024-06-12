@@ -1,5 +1,6 @@
 "use client"
 import { ChevronLeft, Loader2 } from 'lucide-react';
+import Link from 'next/link';
 // Import the useRouter hook from 'next/router'
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
@@ -31,16 +32,22 @@ const Page = ({params}:{params:{id:number}}) => {
         items-center
         '
         >
-            <div
+            <Link
+            href={'/programs'}
              onClick={()=>{
                 setIsLoading(true)
-                router.push(`/programs`)
                               }}
             className='flex
             flex-row
             pointer-cursor
+            hover:bg-warmGreen
+            ease-in-out
+            duration-200
             gap-x-2
-            w-full
+           p-2
+           px-4
+           justify-center
+           rounded-md
             items-center
             '
             ><ChevronLeft
@@ -50,7 +57,7 @@ const Page = ({params}:{params:{id:number}}) => {
             /> <p>{isLoading?<Loader2
                 className='animate-spin
                 '
-                />:"Back"}</p></div>
+                />:"Back"}</p></Link>
         </div>
       {/* Render the id or any other component based on the id */}
       <h1>Program ID: {params.id}</h1>

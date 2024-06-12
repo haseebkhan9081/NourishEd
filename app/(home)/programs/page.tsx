@@ -12,7 +12,7 @@ interface Program {
   count:number;
   longDescription:string;
   description: string;
-  img: string;
+  image: string;
 }
 function Programs() {
   const [isShow, setIsShow] = useState(false)
@@ -80,7 +80,7 @@ items-center
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-4">
           {programs.map((program, index) => (
             <div key={index} className="bg-white p-4 rounded shadow-md hover:shadow-lg transition-shadow duration-300">
-              <Image src={program.img} alt={program.title} className="w-full h-48 object-cover rounded" />
+              <Image src={program.image} alt={program.title} layout='responsive' width={100} height={100} className="w-full h-48 object-cover rounded" />
               <h2 className="text-charcoalGray text-2xl font-bold my-4">{program.title}</h2>
               <p className="text-charcoalGray">{program.description}</p>
               <Button

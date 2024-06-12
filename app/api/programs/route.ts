@@ -12,15 +12,7 @@ export  async function GET(
         count: 120,
         description: "Children supported by the Ibrahim Goth Library food program.",
         longDescription: "The Ibrahim Goth Library Food Support program aims to provide nutritional assistance to children in need within the community served by the library. Through this initiative, we ensure that 120 children receive essential meals regularly, contributing to their overall health and well-being. Additionally, we strive to promote a culture of learning and literacy by combining food support with educational activities at the library.",
-        image: "/images/ibrahim-goth-library-food-support.jpg"
-      },
-      {
-        id: 2,
-        title: "Partnerships",
-        count: 30,
-        description: "Partnerships with local government bodies, NGOs, and corporations.",
-        longDescription: "Our Partnerships program focuses on collaborating with various stakeholders, including local government bodies, non-governmental organizations (NGOs), and corporations, to maximize the impact of our initiatives. By working together, we can leverage resources, expertise, and networks to address community needs more effectively. Through these partnerships, we aim to create sustainable solutions and promote social responsibility.",
-        image: "/images/partnerships.jpg"
+        image: "/ibrahim-goth-library-food-support.png"
       },
       {
         id: 3,
@@ -28,7 +20,7 @@ export  async function GET(
         count: 50,
         description: "Target schools and learning centers identified for future inclusion.",
         longDescription: "The Target Schools program identifies specific schools and learning centers for future inclusion in our food support and educational initiatives. By targeting these institutions, we aim to reach a larger number of children and families in need of assistance. Through careful selection and planning, we ensure that our resources are allocated efficiently and that our programs have a meaningful impact on the communities we serve.",
-        image: "/images/target-schools.jpg"
+        image: "/target-schools.png"
       },
       {
         id: 4,
@@ -36,7 +28,7 @@ export  async function GET(
         count: 200,
         description: "Nutrition education programs for parents and teachers.",
         longDescription: "Our Nutrition Education program provides valuable resources and workshops to parents and teachers on topics related to nutrition and healthy living. By empowering caregivers and educators with knowledge and skills, we aim to promote positive health behaviors within families and schools. Through interactive sessions and practical tips, we support individuals in making informed choices about diet and lifestyle.",
-        image: "/images/nutrition-education.jpg"
+        image: "/nutrition-education.png"
       },
       {
         id: 5,
@@ -44,23 +36,16 @@ export  async function GET(
         count: 10,
         description: "Kitchen build-outs and distribution logistics established.",
         longDescription: "Infrastructure Development is essential for ensuring the efficient operation of our food support programs. This initiative focuses on building and equipping kitchens, as well as establishing distribution logistics, to facilitate the preparation and delivery of meals to beneficiaries. By investing in infrastructure, we improve the quality and scalability of our services, ultimately reaching more people in need.",
-        image: "/images/infrastructure-development.jpg"
+        image: "/infrastructure-development.png"
       },
-      {
-        id: 6,
-        title: "Policy Advocacy",
-        count: 5,
-        description: "Policies advocated at local, regional, and national levels.",
-        longDescription: "Policy Advocacy plays a crucial role in creating systemic change to address food insecurity and related issues. Through this program, we engage with policymakers at the local, regional, and national levels to advocate for policies that support vulnerable communities. By raising awareness, conducting research, and mobilizing stakeholders, we work towards creating a more equitable and sustainable food system for all.",
-        image: "/images/policy-advocacy.jpg"
-      },
+      
       {
         id: 7,
         title: "Monitoring and Evaluation",
         count: 8,
         description: "Mechanisms established to track progress and identify improvements.",
         longDescription: "Monitoring and Evaluation are integral components of our programs, enabling us to assess our impact and make data-driven decisions. This initiative involves establishing mechanisms to track progress, collect feedback, and measure outcomes across all our activities. Through rigorous monitoring and evaluation, we identify areas for improvement and ensure accountability to our stakeholders, ultimately enhancing the effectiveness and efficiency of our interventions.",
-        image: "/images/monitoring-and-evaluation.jpg"
+        image: "/monitoring-and-evaluation.jpg"
       },
       {
         id: 8,
@@ -68,7 +53,7 @@ export  async function GET(
         count: 150,
         description: "Parents supported through vocational training programs.",
         longDescription: "Our Income Generation Support program aims to empower parents and caregivers through vocational training programs. By equipping individuals with marketable skills and entrepreneurship training, we enable them to generate sustainable income to support their families. Through partnerships with local businesses and training providers, we create opportunities for economic empowerment and poverty alleviation within the communities we serve.",
-        image: "/images/income-generation-support.jpg"
+        image: "/income-generation-support.png"
       }
     ];
        return NextResponse.json(programs)
