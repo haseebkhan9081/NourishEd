@@ -17,7 +17,7 @@ interface Story {
     story: string;
     longStory: string;
   }
-export const Page = ({params}:{params:{storyId:number}}) => {
+export const StoryID = ({params}:{params:{storyId:number}}) => {
     const [isLoading,setIsLoading]=useState(false)
     const [isDataLoading,setIsDataLoading]=useState(false);
   const [story,setStory]=useState<Story>()
@@ -160,4 +160,4 @@ bg-warmRed'
 }
 
 
-export default Page;
+export default StoryID;
