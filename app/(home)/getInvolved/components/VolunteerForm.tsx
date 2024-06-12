@@ -14,12 +14,15 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
+import DayPicker from "./Daypicker"
 
 const formSchema = z.object({
   FirstName: z.string().min(2).max(50),
   LastName: z.string().min(2).max(50),
   EmailAddress: z.string().min(2).max(50),
   PhoneNumber: z.string().min(2).max(50),
+  Days: z.array(z.string()).min(2).max(50),
+  
 
 
 
@@ -33,7 +36,8 @@ function VolunteerForm() {
             FirstName: "",
             LastName:"",
             EmailAddress:"",
-            PhoneNumber:""
+            PhoneNumber:"",
+            Days:['Sunday']
         },
       })
       function onSubmit(values: z.infer<typeof formSchema>) {
@@ -102,6 +106,25 @@ function VolunteerForm() {
             </FormItem>
           )}
         />
+
+
+<FormField
+          control={form.control}
+          name="Days"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Days when you are available</FormLabel>
+              <FormControl>
+               <DayPicker days={field.value} setDays={field.onChange} />
+              </FormControl>
+              <FormDescription>
+                These are the days we can call you for volunteer work
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
         <Button type="submit">Submit</Button>
       </form>
     </Form>
