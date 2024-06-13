@@ -28,17 +28,24 @@ import CollapsibleComponent from './Collapsible'
 function Faqs() {
    
   return (
+<div
+className='flex
 
+flex-col
+w-full
+
+justify-center
+items-center'>
     <div
     className='
     mt-8
-    w-full
-    justify-center
-    items-center
+    lg:w-1/2
     bg-slate-100
     p-6
     grid
     space-y-2
+    items-center
+    justify-center
     grid-cols-1
     rounded-md
 '>
@@ -55,7 +62,7 @@ function Faqs() {
 
     
 </div>
-  )
+</div>)
 }
 
 export default Faqs

@@ -18,6 +18,7 @@ const CollapsibleComponent:React.FC<CollapsibleComponentprops> = ({
   return (
     <Collapsible
     className='
+    col-span-1
     '
     >
   <CollapsibleTrigger
