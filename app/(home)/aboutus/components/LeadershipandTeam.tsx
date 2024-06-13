@@ -32,7 +32,7 @@ function LeadershipandTeam() {
     <div   className="w-full bg-warmGreen p-8 py-20">
 
       <h2 className="text-neutralWhite text-2xl font-bold mb-6">Leadership Team</h2>
-      <Tabs defaultValue="BODUSA"  className="w-full flex
+      <Tabs defaultValue="OFFICERS"  className="w-full flex
       flex-col  ">
   <TabsList
   className='w-full
