@@ -69,7 +69,6 @@ setProgramData(response.data)
             duration-200
             gap-x-2
            p-2
-           
            justify-center
            rounded-md
             items-center

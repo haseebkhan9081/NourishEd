@@ -46,7 +46,7 @@ onClick={()=>{
   setVolunteerForm(prev=>!prev)
 }}
 
-className='bg-slate-100
+className='bg-slate-50
 text-warmGreen
 font-bold'
 >
