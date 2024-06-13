@@ -31,7 +31,7 @@ function OurPartners() {
 
 
   return (
-    <div className="bg-white
+    <div className="bg-slate-50
 py-20 
 p-8">
   <h2 className="text-charcoalGray text-2xl font-bold mb-6">Our Partners</h2>

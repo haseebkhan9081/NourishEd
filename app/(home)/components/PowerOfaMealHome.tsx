@@ -8,6 +8,7 @@ function PowerOfaMeal() {
   return (
     <div
 className=' 
+bg-slate-50
  
 transition duration-300 ease-in-out
 md:p-12

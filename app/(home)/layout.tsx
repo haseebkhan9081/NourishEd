@@ -12,6 +12,7 @@ export default function layout({children}:{children
      <div
      className='
      h-full
+     bg-slate-50
      
      '>
        <div
@@ -34,7 +35,7 @@ lg:flex
 inset-y-0 
 w-full
 z-50
-bg-white
+ bg-white
 fixed
 
 '>
@@ -47,9 +48,11 @@ className='
 
 overflow-hidden
 flex
+bg-slate-50
 flex-col
 h-full
-mt-[110px]
+lg:mt-[110px]
+mt-[80px]
 '>
  {children}
   

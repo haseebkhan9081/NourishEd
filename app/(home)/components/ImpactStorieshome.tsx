@@ -37,7 +37,7 @@ function ImpactStorieshome() {
     <div
 
 
-    className='bg-lightGray
+    className='bg-slate-300
     md:p-12 
     py-12
     flex-col

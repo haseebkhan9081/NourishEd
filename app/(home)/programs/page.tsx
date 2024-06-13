@@ -34,13 +34,10 @@ const [isLoading,setIsLoading]=useState<number>()
 const router=useRouter()
   return (
     <div
-className='w-full
-h-full
-flex-col
-space-y-8
-font-base
-justify-center
-items-center
+className='bg-warmGreen
+    w-full
+    py-20 
+    lg:p-8
 '>
       <Transition
         appear={true}
@@ -52,14 +49,13 @@ items-center
         leaveFrom="translate-y-0 opacity-100"
         leaveTo="translate-y-full opacity-0"
       >
-        <div className='hero-section bg-cover bg-center h-64 lg:h-[500px] flex items-center justify-center relative' style={{ backgroundImage: 'url(/hero-background.png)' }}>
-  {/* Overlay to make the background darker */}
-  <div className="absolute inset-0 bg-black opacity-50"></div>
-
-  {/* Content */}
-  <h1 className='text-white text-4xl z-10'>Our Programs</h1>
-</div>
-
+        <div className='w-full
+ justify-center
+ items-center
+ flex'  >
+ 
+      <h1 className='text-white  font-bold text-4xl'>Our Programs</h1>
+      </div>
       </Transition>
  
   

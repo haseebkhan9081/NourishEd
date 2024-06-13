@@ -15,13 +15,10 @@ setIsShow(true)
   return (
   
 <div
-className='w-full
-h-full
-flex-col
-space-y-8
-font-base
-justify-center
-items-center
+className='bg-warmGreen
+    w-full
+    py-20 
+    lg:p-8
 '>
   <Transition
           appear={true}
@@ -33,14 +30,17 @@ items-center
           leaveFrom="translate-y-0 opacity-100"
           leaveTo="translate-y-full opacity-0"
         >
- <div className='hero-section bg-cover bg-center h-64 lg:h-[500px] flex items-center justify-center' style={{ backgroundImage: 'url(/hero-background-about-us.png)' }}>
- <div className="absolute inset-0 bg-black opacity-50"></div>
-      <h1 className='text-white z-10 text-4xl'>About us</h1>
+ <div className='w-full
+ justify-center
+ items-center
+ flex'  >
+ 
+      <h1 className='text-white  font-bold text-4xl'>About us</h1>
       </div>
 
         </Transition>
 
-<div className="bg-warmGreen p-8 py-20">
+<div className="p-8 py-20">
   <h2 className="text-white text-2xl font-bold mb-6">Our Mission and Vision</h2>
   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
     <div className="bg-neutralWhite p-4 rounded shadow-md">
@@ -65,7 +65,7 @@ Our story is one of hope, perseverance, and the unwavering belief that together,
   </div>
 </div>
 
-<div className="bg-white p-8 py-20">
+<div className="bg-slate-50 p-8 py-20">
   <h2 className="text-charcoalGray text-2xl font-bold mb-6">Our Story</h2>
   <div className="grid grid-cols-1  gap-4">
     <div className="bg-neutralWhite p-4 rounded shadow-md">

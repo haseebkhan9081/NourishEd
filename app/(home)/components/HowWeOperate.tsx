@@ -2,7 +2,7 @@ import React from 'react'
 
 function HowWeOperate() {
   return (
-<div className="bg-white p-8 py-20">
+<div className="bg-slate-50 p-8 py-20">
   <h2 className="text-charcoalGray text-2xl font-bold mb-6">How we operate</h2>
   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
     <div className="bg-neutralWhite p-4 rounded shadow-md">
