@@ -49,12 +49,21 @@ function Footer() {
         
         <hr className="my-6 border-gray-200 md:my-8 dark:border-gray-700"/>
         
-        <div className="flex items-center bg-white p-6 w-full rounded-md justify-between">
-            <a href="#">
+        <div className="flex items-center flex-row
+         bg-slate-50 p-6 w-full rounded-md
+         gap-x-4  justify-between">
+            
+            <div>
+            <a href="/">
               <Logo/>
             </a>
+            </div>
             
-            <div className="flex space-x-4
+            <div className="flex 
+            pt-4
+            md:pt-0
+            space-x-1
+
           flex-row
           h-full
           justify-center
@@ -67,7 +76,7 @@ function Footer() {
               text-blue-500 hover:text-blue-800 transition-colors duration-300 ease-in-out
                
               lg:text-4xl
-              text-2xl'
+              text-xl'
               />
             </a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
@@ -76,7 +85,7 @@ function Footer() {
               text-blue-400 hover:text-blue-600 transition-colors duration-300 ease-in-out
              
               lg:text-4xl
-              text-2xl'
+              text-xl'
              />
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
@@ -94,16 +103,15 @@ function Footer() {
                text-purple-600 hover:text-purple-800 transition-colors duration-300 ease-in-out
                
                lg:text-4xl
-               text-2xl'
+               text-xl'
               />
                  </a>
                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
               <FaWhatsapp
              className='
              text-green-500 hover:text-green-700 transition-colors duration-300 ease-in-out
-           
              lg:text-4xl
-             text-2xl'
+             text-xl'
               />
                  </a>
           </div>
