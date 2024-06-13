@@ -42,7 +42,7 @@ function LeadershipandTeam() {
   items-center
   flex
   flex-row
-  gap-x-4'>
+  gap-x-2'>
    
     <TabsTrigger value="BODUSA">BOD USA</TabsTrigger>
     <TabsTrigger value="OFFICERS">OFFICERS</TabsTrigger>
