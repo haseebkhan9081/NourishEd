@@ -23,6 +23,7 @@ const [isLoading,setIsLoading]=useState(false)
     <div
     className=' 
     mt-4
+    bg-slate-50
     w-full
     justify-between
     items-center

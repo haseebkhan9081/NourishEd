@@ -62,6 +62,7 @@ function Footer() {
             <div className="flex 
             pt-4
             md:pt-0
+            lg:space-x-4
             space-x-1
 
           flex-row
