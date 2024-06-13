@@ -70,7 +70,7 @@ const VolunteerForm:React.FC<volunteerformProps>=({setState})=> {
             LastName:"",
             EmailAddress:"",
             PhoneNumber:"",
-            Days:['Sunday'],
+            Days:['Sunday','Saturday'],
             Times:['Morning'],
             Roles:['Outreach'],
             Experience:"",
@@ -87,26 +87,38 @@ const VolunteerForm:React.FC<volunteerformProps>=({setState})=> {
       }
       const [submitted,setIsSubmitted]=useState(false)
   return (
+
 <Form
     {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8
       z-10
       bg-slate-100
+      grid lg:grid-cols-3 gap-6
+      grid-cols-1
       rounded-md
+      justify-center
+      items-center
       p-6
       ">
         <FormField
+        
           control={form.control}
           name="FirstName"
           render={({ field }) => (
-            <FormItem>
+            <FormItem
+            className="
+            m-0
+            lg:pt-7
+            inset-0
+            ">
               <FormLabel>First Name</FormLabel>
               <FormControl>
-                <Input placeholder="First Name" {...field} />
+                <Input
+                className=" "
+                placeholder="First Name" {...field} />
               </FormControl>
-              <FormDescription>
-           
-              </FormDescription>
+              <FormDescription>First Name</FormDescription>
+             
               <FormMessage />
             </FormItem>
           )}
@@ -120,6 +132,8 @@ const VolunteerForm:React.FC<volunteerformProps>=({setState})=> {
               <FormControl>
                 <Input placeholder="Last Name" {...field} />
               </FormControl>
+              <FormDescription>Last Name</FormDescription>
+             
               <FormMessage />
             </FormItem>
           )}
@@ -200,6 +214,8 @@ const VolunteerForm:React.FC<volunteerformProps>=({setState})=> {
               <FormControl>
                <Rolepicker roles={field.value} setroles={field.onChange} />
               </FormControl>
+              <FormDescription>A personal Email Address where we can contact you</FormDescription>
+            
               <FormMessage />
             </FormItem>
           )}
@@ -247,6 +263,8 @@ const VolunteerForm:React.FC<volunteerformProps>=({setState})=> {
 className="w-full
 justify-center
 items-center
+lg:col-start-2
+
 flex">
 
 <Button
