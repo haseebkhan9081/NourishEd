@@ -40,7 +40,7 @@ items-center'>
     className='
     mt-8
     lg:w-1/2
-    bg-slate-100
+    bg-slate-50
     p-6
     grid
     space-y-2

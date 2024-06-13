@@ -92,7 +92,7 @@ const VolunteerForm:React.FC<volunteerformProps>=({setState})=> {
     {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8
       z-10
-      bg-slate-100
+      bg-slate-50
       grid lg:grid-cols-3 gap-6
       grid-cols-1
       rounded-md
@@ -101,7 +101,6 @@ const VolunteerForm:React.FC<volunteerformProps>=({setState})=> {
       p-6
       ">
         <FormField
-        
           control={form.control}
           name="FirstName"
           render={({ field }) => (
@@ -114,7 +113,9 @@ const VolunteerForm:React.FC<volunteerformProps>=({setState})=> {
               <FormLabel>First Name</FormLabel>
               <FormControl>
                 <Input
-                className=" "
+                className="ring-0
+                focus-within:ring-0
+                focus-visible:ring-0 "
                 placeholder="First Name" {...field} />
               </FormControl>
               <FormDescription>First Name</FormDescription>
@@ -130,7 +131,10 @@ const VolunteerForm:React.FC<volunteerformProps>=({setState})=> {
             <FormItem>
               <FormLabel>Last Name</FormLabel>
               <FormControl>
-                <Input placeholder="Last Name" {...field} />
+                <Input
+                className="ring-0
+                focus-within:ring-0
+                focus-visible:ring-0 " placeholder="Last Name" {...field} />
               </FormControl>
               <FormDescription>Last Name</FormDescription>
              
@@ -145,7 +149,11 @@ const VolunteerForm:React.FC<volunteerformProps>=({setState})=> {
             <FormItem>
               <FormLabel>Email Address</FormLabel>
               <FormControl>
-                <Input placeholder="Email Address" {...field} />
+                <Input 
+                className="ring-0
+                focus-within:ring-0
+                focus-visible:ring-0 "
+                placeholder="Email Address" {...field} />
               </FormControl>
               <FormDescription>A personal Email Address where we can contact you</FormDescription>
               <FormMessage />
@@ -160,7 +168,11 @@ const VolunteerForm:React.FC<volunteerformProps>=({setState})=> {
             <FormItem>
               <FormLabel>Phone Number</FormLabel>
               <FormControl>
-                <Input placeholder="Phone Number" {...field} />
+                <Input
+                
+                className="ring-0
+                focus-within:ring-0
+                focus-visible:ring-0 " placeholder="Phone Number" {...field} />
               </FormControl>
                <FormDescription>A personal number where we can call you</FormDescription>
               <FormMessage />
@@ -230,6 +242,9 @@ const VolunteerForm:React.FC<volunteerformProps>=({setState})=> {
               <FormLabel>Previous Volunteer Experience (optional)</FormLabel>
               <FormControl>
                 <Textarea
+                className="ring-0
+                focus-within:ring-0
+                focus-visible:ring-0 "
                 {...field}
                 />
               </FormControl>
@@ -247,11 +262,14 @@ const VolunteerForm:React.FC<volunteerformProps>=({setState})=> {
               <FormLabel>Any comment? (optional)</FormLabel>
               <FormControl>
                 <Textarea
+                className="ring-0
+                focus-within:ring-0
+                focus-visible:ring-0 "
                 {...field}
                 />
               </FormControl>
               <FormDescription>
-                questions and suggestions are welcome
+                Questions and suggestions are welcome
               </FormDescription>
               <FormMessage />
             </FormItem>

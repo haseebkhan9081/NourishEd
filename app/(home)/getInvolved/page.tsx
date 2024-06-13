@@ -75,11 +75,11 @@ className='font-bold'>
   {partnerform?"Cancel":"Become a Partner"}
   </Button>
 
-  {partnerform&&
+  
 
 <Transition
 appear={true}
-show={true}
+show={partnerform}
 enter="transform transition duration-1000"
 enterFrom="translate-y-full opacity-0"
 enterTo="translate-y-0 opacity-100"
@@ -93,10 +93,7 @@ className=''>
 </div>
 
 
-
-
 </Transition>
-}
 
   </div>  
   

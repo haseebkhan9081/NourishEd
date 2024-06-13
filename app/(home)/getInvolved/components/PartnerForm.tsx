@@ -90,12 +90,23 @@ const PartnershipForm: React.FC<partnershipFormProps> = ({ setState }) => {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 bg-slate-100 grid lg:grid-cols-3 gap-6 grid-cols-1 rounded-md justify-center items-center p-6">
+      
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 bg-slate-50 grid lg:grid-cols-3 gap-6 grid-cols-1 rounded-md justify-center items-center p-6">
         <FormField control={form.control} name="OrganizationName" render={({ field }) => (
-          <FormItem>
+          <FormItem
+          
+          className="
+          m-0
+          lg:pt-7
+          inset-0
+          ">
             <FormLabel>Organization Name</FormLabel>
             <FormControl>
-              <Input placeholder="Organization Name" {...field} />
+              <Input
+              className="ring-0
+              focus-within:ring-0
+              focus-visible:ring-0 "
+              placeholder="Organization Name" {...field} />
             </FormControl>
             <FormDescription>Enter the name of your organization.</FormDescription>
             <FormMessage />
@@ -105,7 +116,12 @@ const PartnershipForm: React.FC<partnershipFormProps> = ({ setState }) => {
           <FormItem>
             <FormLabel>Website URL</FormLabel>
             <FormControl>
-              <Input placeholder="Website URL" {...field} />
+              <Input
+              
+              className="ring-0
+                focus-within:ring-0
+                focus-visible:ring-0 "
+              placeholder="Website URL" {...field} />
             </FormControl>
             <FormDescription>Enter your organizations website URL (optional).</FormDescription>
             <FormMessage />
@@ -115,7 +131,10 @@ const PartnershipForm: React.FC<partnershipFormProps> = ({ setState }) => {
           <FormItem>
             <FormLabel>Street Address</FormLabel>
             <FormControl>
-              <Input placeholder="Street Address" {...field} />
+              <Input
+              className="ring-0
+              focus-within:ring-0
+              focus-visible:ring-0 " placeholder="Street Address" {...field} />
             </FormControl>
             <FormDescription>Enter the street address of your organization.</FormDescription>
             <FormMessage />
@@ -125,7 +144,10 @@ const PartnershipForm: React.FC<partnershipFormProps> = ({ setState }) => {
           <FormItem>
             <FormLabel>City</FormLabel>
             <FormControl>
-              <Input placeholder="City" {...field} />
+              <Input
+              className="ring-0
+              focus-within:ring-0
+              focus-visible:ring-0 " placeholder="City" {...field} />
             </FormControl>
             <FormDescription>Enter the city where your organization is located.</FormDescription>
             <FormMessage />
@@ -135,7 +157,11 @@ const PartnershipForm: React.FC<partnershipFormProps> = ({ setState }) => {
           <FormItem>
             <FormLabel>State</FormLabel>
             <FormControl>
-              <Input placeholder="State" {...field} />
+              <Input 
+              className="ring-0
+              focus-within:ring-0
+              focus-visible:ring-0 "
+              placeholder="State" {...field} />
             </FormControl>
             <FormDescription>Enter the state/province where your organization is located.</FormDescription>
             <FormMessage />
@@ -145,7 +171,11 @@ const PartnershipForm: React.FC<partnershipFormProps> = ({ setState }) => {
           <FormItem>
             <FormLabel>Zip/Postal Code</FormLabel>
             <FormControl>
-              <Input placeholder="Zip/Postal Code" {...field} />
+              <Input
+              className="ring-0
+              focus-within:ring-0
+              focus-visible:ring-0 "
+              placeholder="Zip/Postal Code" {...field} />
             </FormControl>
             <FormDescription>Enter the zip/postal code of your organizations address.</FormDescription>
             <FormMessage />
@@ -155,7 +185,11 @@ const PartnershipForm: React.FC<partnershipFormProps> = ({ setState }) => {
           <FormItem>
             <FormLabel>Country</FormLabel>
             <FormControl>
-              <Input placeholder="Country" {...field} />
+              <Input 
+              className="ring-0
+              focus-within:ring-0
+              focus-visible:ring-0 "
+              placeholder="Country" {...field} />
             </FormControl>
             <FormDescription>Enter the country where your organization is located.</FormDescription>
             <FormMessage />
@@ -165,7 +199,11 @@ const PartnershipForm: React.FC<partnershipFormProps> = ({ setState }) => {
           <FormItem>
             <FormLabel>Contact Person First Name</FormLabel>
             <FormControl>
-              <Input placeholder="First Name" {...field} />
+              <Input 
+              className="ring-0
+              focus-within:ring-0
+              focus-visible:ring-0 "
+              placeholder="First Name" {...field} />
             </FormControl>
             <FormDescription>Enter the first name of the contact person.</FormDescription>
             <FormMessage />
@@ -175,7 +213,11 @@ const PartnershipForm: React.FC<partnershipFormProps> = ({ setState }) => {
           <FormItem>
             <FormLabel>Contact Person Last Name</FormLabel>
             <FormControl>
-              <Input placeholder="Last Name" {...field} />
+              <Input 
+              className="ring-0
+              focus-within:ring-0
+              focus-visible:ring-0 "
+              placeholder="Last Name" {...field} />
             </FormControl>
             <FormDescription>Enter the last name of the contact person.</FormDescription>
             <FormMessage />
@@ -185,7 +227,11 @@ const PartnershipForm: React.FC<partnershipFormProps> = ({ setState }) => {
           <FormItem>
             <FormLabel>Contact Person Position</FormLabel>
             <FormControl>
-              <Input placeholder="Position" {...field} />
+              <Input
+              className="ring-0
+              focus-within:ring-0
+              focus-visible:ring-0 "
+              placeholder="Position" {...field} />
             </FormControl>
             <FormDescription>Enter the position/title of the contact person.</FormDescription>
             <FormMessage />
@@ -195,7 +241,11 @@ const PartnershipForm: React.FC<partnershipFormProps> = ({ setState }) => {
           <FormItem>
             <FormLabel>Contact Person Email</FormLabel>
             <FormControl>
-              <Input placeholder="Email" {...field} />
+              <Input 
+              className="ring-0
+              focus-within:ring-0
+              focus-visible:ring-0 "
+              placeholder="Email" {...field} />
               </FormControl>
               <FormDescription>Enter the email address of the contact person </FormDescription>
               <FormMessage />
@@ -205,7 +255,12 @@ const PartnershipForm: React.FC<partnershipFormProps> = ({ setState }) => {
           <FormItem>
             <FormLabel>Contact Person Phone Number</FormLabel>
             <FormControl>
-              <Input placeholder="Phone Number" {...field} />
+              <Input
+              
+              className="ring-0
+                focus-within:ring-0
+                focus-visible:ring-0 "
+              placeholder="Phone Number" {...field} />
             </FormControl>
             <FormDescription>Enter the phone number of the contact person.</FormDescription>
             <FormMessage />
@@ -216,7 +271,11 @@ const PartnershipForm: React.FC<partnershipFormProps> = ({ setState }) => {
           <FormItem>
             <FormLabel>Partnership Type</FormLabel>
             <FormControl>
-              <Input placeholder="Type of Partnership" {...field} />
+              <Input
+              className="ring-0
+              focus-within:ring-0
+              focus-visible:ring-0 "
+              placeholder="Type of Partnership" {...field} />
             </FormControl>
             <FormDescription>Describe the type of partnership you are seeking.</FormDescription>
             <FormMessage />
@@ -226,7 +285,12 @@ const PartnershipForm: React.FC<partnershipFormProps> = ({ setState }) => {
           <FormItem>
             <FormLabel>Partnership Description</FormLabel>
             <FormControl>
-              <Textarea placeholder="Description of Partnership" {...field} />
+              <Textarea
+              
+              className="ring-0
+                focus-within:ring-0
+                focus-visible:ring-0 "
+              placeholder="Description of Partnership" {...field} />
             </FormControl>
             <FormDescription>Provide a detailed description of the partnership.</FormDescription>
             <FormMessage />
@@ -236,7 +300,11 @@ const PartnershipForm: React.FC<partnershipFormProps> = ({ setState }) => {
           <FormItem>
             <FormLabel>Organization Mission</FormLabel>
             <FormControl>
-              <Textarea placeholder="Organization Mission" {...field} />
+              <Textarea
+              className="ring-0
+              focus-within:ring-0
+              focus-visible:ring-0 "
+              placeholder="Organization Mission" {...field} />
             </FormControl>
             <FormDescription>Describe the mission of your organization.</FormDescription>
             <FormMessage />
@@ -246,7 +314,12 @@ const PartnershipForm: React.FC<partnershipFormProps> = ({ setState }) => {
           <FormItem>
             <FormLabel>Goals and Objectives</FormLabel>
             <FormControl>
-              <Textarea placeholder="Goals and Objectives" {...field} />
+              <Textarea 
+              
+              className="ring-0
+                focus-within:ring-0
+                focus-visible:ring-0 "
+              placeholder="Goals and Objectives" {...field} />
             </FormControl>
             <FormDescription>List the goals and objectives of the partnership.</FormDescription>
             <FormMessage />
@@ -256,7 +329,11 @@ const PartnershipForm: React.FC<partnershipFormProps> = ({ setState }) => {
           <FormItem>
             <FormLabel>Past Partnerships</FormLabel>
             <FormControl>
-              <Textarea placeholder="Past Partnerships" {...field} />
+              <Textarea 
+              className="ring-0
+              focus-within:ring-0
+              focus-visible:ring-0 "
+              placeholder="Past Partnerships" {...field} />
             </FormControl>
             <FormDescription>Describe any past partnerships (optional).</FormDescription>
             <FormMessage />
@@ -266,7 +343,11 @@ const PartnershipForm: React.FC<partnershipFormProps> = ({ setState }) => {
           <FormItem>
             <FormLabel>Expected Contribution</FormLabel>
             <FormControl>
-              <Textarea placeholder="Expected Contribution" {...field} />
+              <Textarea 
+              className="ring-0
+              focus-within:ring-0
+              focus-visible:ring-0 "
+              placeholder="Expected Contribution" {...field} />
             </FormControl>
             <FormDescription>Outline your expected contribution to the partnership.</FormDescription>
             <FormMessage />
@@ -276,7 +357,11 @@ const PartnershipForm: React.FC<partnershipFormProps> = ({ setState }) => {
           <FormItem>
             <FormLabel>Other Information</FormLabel>
             <FormControl>
-              <Textarea placeholder="Other Information" {...field} />
+              <Textarea 
+              className="ring-0
+              focus-within:ring-0
+              focus-visible:ring-0 "
+              placeholder="Other Information" {...field} />
             </FormControl>
             <FormDescription>Provide any additional information (optional).</FormDescription>
             <FormMessage />
