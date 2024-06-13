@@ -14,8 +14,9 @@ const [state,setIsState]=useState(false)
 
   return (
     <div className="bg-warmGreen
+    w-full
     py-20 
-    p-8">
+    lg:p-8">
       <Transition
        appear={true}
        show={true}
