@@ -17,13 +17,13 @@ function HowYoucanHelp() {
     <div className="bg-neutralWhite p-4 rounded shadow-md">
       <h3 className="text-charcoalGray text-xl font-bold">Volunteer</h3>
       <p className="text-charcoalGray">Join our team of dedicated volunteers who help us prepare and distribute meals. Your time and effort can make a huge difference.</p>
-      <a href="/volunteer" className="text-coolBlue font-bold hover:underline">Become a Volunteer</a>
+      <a href="/getInvolved" className="text-coolBlue font-bold hover:underline">Become a Volunteer</a>
     </div>
 
     <div className="bg-neutralWhite p-4 rounded shadow-md">
       <h3 className="text-charcoalGray text-xl font-bold">Spread the Word</h3>
       <p className="text-charcoalGray">Help us raise awareness about the importance of our mission. Share our story and encourage others to get involved.</p>
-      <a href="/share" className="text-coolBlue font-bold hover:underline">Share Our Mission</a>
+      <a href="/contactUs#FollowUS" className="text-coolBlue font-bold hover:underline">Share Our Mission</a>
     </div>
   </div>
 </div>

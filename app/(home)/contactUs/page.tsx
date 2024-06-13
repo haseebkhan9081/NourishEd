@@ -109,7 +109,7 @@ const [state,setIsState]=useState(false)
           ></iframe>
         </div>
 
-        <div className="bg-neutralWhite p-4 rounded shadow-md">
+        <div className="bg-neutralWhite p-4 rounded shadow-md " id='FollowUS'>
           <h3 className="text-charcoalGray text-xl font-bold">Follow Us</h3>
           <div className="flex space-x-4
           flex-row

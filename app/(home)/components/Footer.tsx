@@ -24,8 +24,7 @@ function Footer() {
                 <div className="flex flex-col items-start mt-5 space-y-2">
                     <a href="#" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Home</a>
                     <a href="/aboutus" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Who We Are</a>
-                    <a href="/ourVisionAndMission" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Our Vision & Mission</a>
-                    <a href="/ourVisionAndMission" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Contact us</a>
+                    <a href="/contactUs" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Contact us</a>
                     <a href="/programs" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500 flex-row w-full gap-x-2 flex">Programs</a>
                     <a href="mailto:donorCare@NourishED.com" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500 flex-row w-full gap-x-2 flex">
   <Mail/> donorCare@NourishED.com
@@ -42,8 +41,8 @@ function Footer() {
                 <p className="font-semibold text-gray-800 dark:text-white">Be a change</p>
 
                 <div className="flex flex-col items-start mt-5 space-y-2">
-                    <a href="#" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Donate online</a>
-                    <a href="#" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Get Involved</a>
+                    <a href="/donate" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Donate online</a>
+                    <a href="/getInvolved" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Get Involved</a>
                 </div>
             </div>
         </div>
@@ -108,6 +107,9 @@ function Footer() {
               />
                  </a>
           </div>
+        </div>
+        <div className="mt-6 text-center text-sm text-gray-600 dark:text-gray-300">
+          <p>&copy; {new Date().getFullYear()} NourishEd. All rights reserved.</p>
         </div>
     </div>
 </footer>
