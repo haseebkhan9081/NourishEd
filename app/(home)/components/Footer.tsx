@@ -50,7 +50,7 @@ function Footer() {
         
         <hr className="my-6 border-gray-200 md:my-8 dark:border-gray-700"/>
         
-        <div className="flex items-center justify-between">
+        <div className="flex items-center bg-white p-6 w-full rounded-md justify-between">
             <a href="#">
               <Logo/>
             </a>
