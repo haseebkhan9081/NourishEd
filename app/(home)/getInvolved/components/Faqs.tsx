@@ -1,10 +1,7 @@
 import React, { useState } from 'react'
-import {
-    Collapsible,
-    CollapsibleContent,
-    CollapsibleTrigger,
-  } from "@/components/ui/collapsible"
+
 import { ChevronDown, ChevronRight } from 'lucide-react'
+import CollapsibleComponent from './Collapsible'
  const data=[
     {
       "question": "How can I volunteer with your organization?",
@@ -29,7 +26,7 @@ import { ChevronDown, ChevronRight } from 'lucide-react'
   ]
    
 function Faqs() {
-    const [touched,setTouched]=useState(-1);
+   
   return (
 
     <div
@@ -49,39 +46,11 @@ function Faqs() {
         <h1
         className='text-xl'>Frequently Asked Questions</h1>
 {data?.map((qa,index)=>(
-    <Collapsible
-    key={index}
-    className='
-    '
-    >
-  <CollapsibleTrigger
-  onClick={()=>{
-    if(touched===index){
-        setTouched(-1)
-    }else{
-    setTouched(index)}
-
-}}
-  className='
-  ring-1
-  p-2
-  ring-slate-700
-  rounded-sm
-  justify-center
-  flex-row
-  gap-x-1
-  flex
-  items-center'
-  >
-   {touched===index?<ChevronDown
-   className='w-4 h-4'/>: <ChevronRight
-   className='w-4 h-4'/>} 
-  {qa.question}</CollapsibleTrigger>
-  <CollapsibleContent
-  className='p-2' >
-   {qa.answer}
-  </CollapsibleContent>
-</Collapsible>
+     <CollapsibleComponent
+     q={qa.question}
+     a={qa.answer}
+     key={index}
+     />
 ))}
 
     
