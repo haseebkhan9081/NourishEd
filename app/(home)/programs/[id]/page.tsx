@@ -42,14 +42,15 @@ setProgramData(response.data)
   
   return (
     <div
+
     className='flex
     pt-3
     flex-col
-    space-y-6'>
+    space-y-2'>
         <div
 
         className='flex
-        px-6
+        px-2
         flex-row
         justify-between
         items-center
@@ -68,7 +69,7 @@ setProgramData(response.data)
             duration-200
             gap-x-2
            p-2
-           px-4
+           
            justify-center
            rounded-md
             items-center
@@ -77,10 +78,10 @@ setProgramData(response.data)
            
             className='w-8
             h-8'
-            /> <p>{isLoading?<Loader2
+            /> <p>{isLoading&&<Loader2
                 className='animate-spin
                 '
-                />:"Back"}</p></Link>
+                />}</p></Link>
         </div>
         {isDataLoading&&
   <div

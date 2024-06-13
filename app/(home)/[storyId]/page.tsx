@@ -41,11 +41,11 @@ interface Story {
     className='flex
     pt-3
     flex-col
-    space-y-6'>
+    space-y-2'>
         <div
 
         className='flex
-        px-6
+        px-2
         flex-row
         justify-between
         items-center
@@ -64,7 +64,7 @@ interface Story {
             duration-200
             gap-x-2
            p-2
-           px-4
+           
            justify-center
            rounded-md
             items-center
@@ -73,10 +73,9 @@ interface Story {
            
             className='w-8
             h-8'
-            /> <p>{isLoading?<Loader2
-                className='animate-spin
-                '
-                />:"Back"}</p></Link>
+            /> <p>{isLoading&&<Loader2
+                className='animate-spin'
+                />}</p></Link>
         </div>
         {isDataLoading&&
   <div
