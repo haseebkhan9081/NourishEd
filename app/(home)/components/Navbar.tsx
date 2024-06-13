@@ -39,6 +39,7 @@ const [isLoading,setIsLoading]=useState(false)
         <div
         className='items-start
         justify-start
+        w-full
         flex'>
        <Logo/>
        </div>

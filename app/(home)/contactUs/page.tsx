@@ -113,30 +113,54 @@ const [state,setIsState]=useState(false)
           <h3 className="text-charcoalGray text-xl font-bold">Follow Us</h3>
           <div className="flex space-x-4
           flex-row
+          h-full
           justify-center
+          pb-6
           items-center
           ">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
               <FaFacebook
-              size={24}/>
+              className='
+              text-blue-500 hover:text-blue-800 transition-colors duration-300 ease-in-out
+               
+              lg:text-4xl
+              text-2xl'
+              />
             </a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
              <FaTwitter
-             size={24}/>
+              className='
+              text-blue-400 hover:text-blue-600 transition-colors duration-300 ease-in-out
+             
+              lg:text-4xl
+              text-2xl'
+             />
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
 <FaLinkedin
-size={24}
+ className='
+  
+ lg:text-4xl
+ text-blue-600 hover:text-blue-800 transition-colors duration-300 ease-in-out
+ text-2xl'
 />
             </a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
               <FaInstagram
-              size={24}
+               className='
+               text-purple-600 hover:text-purple-800 transition-colors duration-300 ease-in-out
+               
+               lg:text-4xl
+               text-2xl'
               />
                  </a>
                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
               <FaWhatsapp
-              size={24}
+             className='
+             text-green-500 hover:text-green-700 transition-colors duration-300 ease-in-out
+           
+             lg:text-4xl
+             text-2xl'
               />
                  </a>
           </div>

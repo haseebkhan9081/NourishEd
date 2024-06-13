@@ -1,7 +1,7 @@
 import React from 'react'
 import Logo from './Logo'
 import { Mail, Phone } from 'lucide-react'
-import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaWhatsapp } from 'react-icons/fa'
 function Footer() {
   return ( <footer className="bg-slate-50 dark:bg-gray-900">
     <div className="container px-6 py-12 mx-auto">
@@ -55,20 +55,59 @@ function Footer() {
               <Logo/>
             </a>
             
-            <div className="flex 
-            justify-center
-            items-center
-            gap-x-2
-            -mx-2">
-                
-<a href="#"><FaFacebook/></a>
-<a href="#"><FaInstagram/></a>
-<a href="#"><FaTwitter/></a>
-
-                 
-
-                
-            </div>
+            <div className="flex space-x-4
+          flex-row
+          h-full
+          justify-center
+          pb-6
+          items-center
+          ">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <FaFacebook
+              className='
+              text-blue-500 hover:text-blue-800 transition-colors duration-300 ease-in-out
+               
+              lg:text-4xl
+              text-2xl'
+              />
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+             <FaTwitter
+              className='
+              text-blue-400 hover:text-blue-600 transition-colors duration-300 ease-in-out
+             
+              lg:text-4xl
+              text-2xl'
+             />
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+<FaLinkedin
+ className='
+  
+ lg:text-4xl
+ text-blue-600 hover:text-blue-800 transition-colors duration-300 ease-in-out
+ text-2xl'
+/>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <FaInstagram
+               className='
+               text-purple-600 hover:text-purple-800 transition-colors duration-300 ease-in-out
+               
+               lg:text-4xl
+               text-2xl'
+              />
+                 </a>
+                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <FaWhatsapp
+             className='
+             text-green-500 hover:text-green-700 transition-colors duration-300 ease-in-out
+           
+             lg:text-4xl
+             text-2xl'
+              />
+                 </a>
+          </div>
         </div>
     </div>
 </footer>
