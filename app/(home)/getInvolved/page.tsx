@@ -4,7 +4,8 @@ import { Transition } from '@headlessui/react'
 import React, { useEffect, useState } from 'react'
 import VolunteerForm from './components/VolunteerForm'
 import { FaVolleyballBall } from 'react-icons/fa'
-import PartnerForm from './components/PartnerForm'
+import PartnershipForm from './components/PartnerForm'
+import Faqs from './components/Faqs'
 
 function GetInvolved() {
  const [isShow,setIsShow]=useState(false)
@@ -88,13 +89,19 @@ leaveTo="translate-y-full opacity-0"
 >
 <div
 className=''>
-  <PartnerForm/>
+  <PartnershipForm setState={setPartnerForm}/>
 </div>
+
+
+
 
 </Transition>
 }
 
   </div>  
+  
+
+<Faqs/>
   
 </div>
     
