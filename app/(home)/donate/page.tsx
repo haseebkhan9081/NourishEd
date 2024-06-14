@@ -42,6 +42,7 @@ items-center'>
 className='w-[400px]
 flex-col
 flex
+  p-4
 space-y-4
 '>
    <Image
