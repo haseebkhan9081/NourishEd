@@ -41,6 +41,7 @@ items-center'>
 <div
 className='w-[400px]
 flex-col
+p-4
 flex
 space-y-4
 '>
