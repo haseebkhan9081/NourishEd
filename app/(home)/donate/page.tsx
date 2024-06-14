@@ -22,7 +22,7 @@ text-warmGreen
 p-3
 font-bold
 text-2xl
-'>Donate now to provide meals to children with need</h1>
+'>Donate now to provide meals to children in need</h1>
 
 <div
 className='grid
