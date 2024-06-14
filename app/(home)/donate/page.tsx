@@ -1,28 +1,42 @@
 "use client"
 import { Transition } from '@headlessui/react'
-import React, { useEffect, useState } from 'react'
+import { useState } from 'react'
+import DonateNowForm from './components/DonateNowForm'
+import MainForm from './components/MainForm'
 
-function Donate() {
- const [isShow,setIsShow]=useState(false)
- useEffect(()=>{
-setIsShow(true)
- },[])
+export default function Donate() {
+  const [isShowing, setIsShowing] = useState(false)
+
   return (
-    <div>   <Transition
-   appear={true}
-   show={isShow}
-   enter="transform transition duration-1000"
-   enterFrom="translate-y-full opacity-0"
-   enterTo="translate-y-0 opacity-100"
-   leave="transform transition duration-1000"
-   leaveFrom="translate-y-0 opacity-100"
-   leaveTo="translate-y-full opacity-0"
- >
-<div>Donate</div>
- </Transition>
- </div>
+     <div
+     className='w-full
+     pt-6
+     justify-center
+     items-center
+     flex
+     flex-col'>
+<h1
+className='text-center
+text-warmGreen
+p-3
+font-bold
+text-2xl
+'>Donate now to provide meals to children with need</h1>
 
+<div
+className='grid
+grid-cols-1
+lg:grid-cols-2
+'>
+<div>
+  <MainForm/>
+</div>
+<div>
+  the image
+</div>
+</div>
+
+     </div>
   )
-}
 
-export default Donate
+}
