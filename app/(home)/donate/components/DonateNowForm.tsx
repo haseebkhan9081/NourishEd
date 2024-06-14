@@ -2,13 +2,19 @@ import { Lock } from 'lucide-react'
 import React from 'react'
 import { FaArrowRight, FaCircle, FaRegCircle } from 'react-icons/fa'
 import { useCustomForm } from '../hooks/useCustomForm'
+import { UseFormReturn } from 'react-hook-form';
 interface DonateNowFormprops{
     title:string,
     children:React.ReactNode,
     indexes:number;
     currentStepIndex:number,
     goto:(i:number)=>void,
-    next:()=>void
+    next:()=>void,
+    form:UseFormReturn<{
+      username: string;
+      amount:number;
+      contact:string
+  }, any, undefined>
 }
 const DonateNowForm:React.FC<DonateNowFormprops> = ({
     title,
@@ -27,6 +33,7 @@ const DonateNowForm:React.FC<DonateNowFormprops> = ({
     <div
     className='flex
     flex-col
+    w-full
     '
     >
       
@@ -36,7 +43,7 @@ const DonateNowForm:React.FC<DonateNowFormprops> = ({
         text-white
         justify-between
         items-center
-        flex-row bg-warmGreen w-[400px]'>
+        flex-row bg-warmGreen w-[350px]'>
 <div
 className='text-xl text-start
 font-medium
