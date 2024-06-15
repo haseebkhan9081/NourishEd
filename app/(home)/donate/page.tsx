@@ -43,6 +43,7 @@ className='w-[400px]
 flex-col
 p-4
 flex
+  p-4
 space-y-4
 '>
    <Image
