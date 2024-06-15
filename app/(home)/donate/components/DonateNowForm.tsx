@@ -11,9 +11,18 @@ interface DonateNowFormprops{
     goto:(i:number)=>void,
     next:()=>void,
     form:UseFormReturn<{
-      username: string;
-      amount:number;
-      contact:string
+      Firstname: string;
+  amount: number;
+  contact: string;
+  Lastname: string;
+  email: string;
+  phone: string;
+  country: string;
+  address: string;
+  postalCode: string;
+  city: string;
+  stateProvince: string;
+    comment?: string | undefined;
   }, any, undefined>
 }
 const DonateNowForm:React.FC<DonateNowFormprops> = ({

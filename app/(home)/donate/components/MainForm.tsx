@@ -24,13 +24,28 @@ import Paymentform from './Paymentform';
 import { toast } from 'sonner';
 
 const formSchema = z.object({
-  username: z.string().min(2).max(50),
-  amount: z.union([z.number().min(10,{message:"Amount must be at least $10"}), z.string().transform((val) => parseFloat(val)).refine(val => val >= 10,{
-    message: "Amount must be at least $10",
-  })]),  // This allows either a number or a string that can be converted to a positive number
+  Firstname: z.string().min(2).max(50),
+  amount: z.union([
+    z.number().min(10, { message: "Amount must be at least $10" }),
+    z.string().transform((val) => parseFloat(val)).refine(val => val >= 10, {
+      message: "Amount must be at least $10",
+    })
+  ]),
   contact: z.string().min(2).max(50),
-
+  comment: z.string().min(2).max(50).optional(),
+  Lastname: z.string().min(2).max(50),
+  email: z.string().email({ message: "Invalid email address" }),
+  phone: z.string().regex(/^\+?[0-9]\d{1,14}$/, { message: "Invalid phone number" }),
+  country: z.string().min(2).max(50),
+  address: z.string().min(2).max(100), // Address field with validation
+  postalCode: z.string().regex(/^\d{5}$/, { message: "Invalid postal code" }), // Postal code field with validation (5 digits)
+  city: z.string().min(2).max(50), // City field with validation
+  stateProvince: z.string().min(2).max(50) // State/Province field with validation
 });
+
+ 
+
+
 const titles=[
    "Choose amount",
    "Information",
@@ -41,8 +56,8 @@ const MainForm = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      username: "",
-      amount:0,
+     
+      
       
     },
   })
@@ -98,8 +113,9 @@ onClick={async()=>{
   if (form.getValues().amount >= 10) {
     goTo(1); // Proceed to the next step if amount is valid
     console.log(form.getValues()); // Log form values
-    await  form.trigger(['username'])
-    if(form.getValues().username.length>=2){
+    await  form.trigger(['Firstname'])
+    await  form.trigger(['Lastname'])
+    if(form.getValues().Firstname.length>=2){
       goTo(2); // Proceed to the next step if amount is valid
       console.log(form.getValues()); // Log form values
 

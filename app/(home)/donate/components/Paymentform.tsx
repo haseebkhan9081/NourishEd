@@ -3,9 +3,18 @@ import { Input } from '@/components/ui/input'
 import React from 'react'
 import { UseFormReturn } from 'react-hook-form';
 const Paymentform = ({form}:{form:UseFormReturn<{
-  username: string;
+  Firstname: string;
   amount: number;
-  contact:string
+  contact: string;
+  Lastname: string;
+  email: string;
+  phone: string;
+  country: string;
+  address: string;
+  postalCode: string;
+  city: string;
+  stateProvince: string;
+    comment?: string | undefined;
 }, any, undefined>}) => {
   return (
     <div key={3}>Step 3: Confirm Submission
