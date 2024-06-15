@@ -8,17 +8,17 @@ import { Checkbox } from "@/components/ui/checkbox"
 
 const ChooseAmountForm = ({form}:{form:UseFormReturn<{
   Firstname: string;
-  amount: number;
-  contact: string;
-  Lastname: string;
-  email: string;
-  phone: string;
-  country: string;
-  address: string;
-  postalCode: string;
-  city: string;
-  stateProvince: string;
+    amount: number;
+    Lastname: string;
+    email: string;
+    address: string;
     comment?: string | undefined;
+    phone?: string | undefined;
+    country?: string | undefined;
+    postalCode?: string | undefined;
+    city?: string | undefined;
+    stateProvince?: string | undefined;
+    agreeToPrivacyPolicy:boolean;
 }, any, undefined>}) => {
 
   const predefinedAmounts = [10, 20, 50,60,70,80,90,100];

@@ -17,31 +17,63 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
  
-import { z } from "zod"
+import { boolean, z } from "zod"
 import ChooseAmountForm from './ChooseAmountForm';
 import UserInfoForm from './UserInfoForm';
 import Paymentform from './Paymentform';
 import { toast } from 'sonner';
 
 const formSchema = z.object({
-  Firstname: z.string().min(2).max(50),
+  Firstname: z.string()
+    .min(2, { message: "First name must be at least 2 characters long" })
+    .max(50, { message: "First name must be no more than 50 characters long" }),
+  
   amount: z.union([
     z.number().min(10, { message: "Amount must be at least $10" }),
-    z.string().transform((val) => parseFloat(val)).refine(val => val >= 10, {
+    z.string().transform((val:any) => parseFloat(val)).refine((val:number) => val >= 10, {
       message: "Amount must be at least $10",
     })
   ]),
-  contact: z.string().min(2).max(50),
-  comment: z.string().min(2).max(50).optional(),
-  Lastname: z.string().min(2).max(50),
+  
+  comment: z.string()
+    .min(2, { message: "Comment must be at least 2 characters long" })
+    .max(50, { message: "Comment must be no more than 50 characters long" })
+    .optional(),
+  
+  Lastname: z.string()
+    .min(2, { message: "Last name must be at least 2 characters long" })
+    .max(50, { message: "Last name must be no more than 50 characters long" }),
+  
   email: z.string().email({ message: "Invalid email address" }),
-  phone: z.string().regex(/^\+?[0-9]\d{1,14}$/, { message: "Invalid phone number" }),
-  country: z.string().min(2).max(50),
-  address: z.string().min(2).max(100), // Address field with validation
-  postalCode: z.string().regex(/^\d{5}$/, { message: "Invalid postal code" }), // Postal code field with validation (5 digits)
-  city: z.string().min(2).max(50), // City field with validation
-  stateProvince: z.string().min(2).max(50) // State/Province field with validation
+  
+  phone: z.string().regex(/^\+?[0-9]\d{1,14}$/, { message: "Invalid phone number format" }).optional(),
+  
+  country: z.string()
+    .min(2, { message: "Country name must be at least 2 characters long" })
+    .max(50, { message: "Country name must be no more than 50 characters long" })
+    .optional(),
+  
+  address: z.string()
+    .min(2, { message: "Address must be at least 2 characters long" })
+    .max(100, { message: "Address must be no more than 100 characters long" }),
+  
+  postalCode: z.string().regex(/^\d{5}$/, { message: "Postal code must be exactly 5 digits" }).optional(),
+  
+  city: z.string()
+    .min(2, { message: "City name must be at least 2 characters long" })
+    .max(50, { message: "City name must be no more than 50 characters long" })
+    .optional(),
+  
+  stateProvince: z.string()
+    .min(2, { message: "State/Province name must be at least 2 characters long" })
+    .max(50, { message: "State/Province name must be no more than 50 characters long" })
+    .optional(),
+  
+  agreeToPrivacyPolicy: z.boolean().refine((val:boolean) => val === true, {
+    message: "You must agree to the privacy policy",
+  })
 });
+
 
  
 
@@ -113,13 +145,21 @@ onClick={async()=>{
   if (form.getValues().amount >= 10) {
     goTo(1); // Proceed to the next step if amount is valid
     console.log(form.getValues()); // Log form values
-    await  form.trigger(['Firstname'])
-    await  form.trigger(['Lastname'])
-    if(form.getValues().Firstname.length>=2){
-      goTo(2); // Proceed to the next step if amount is valid
-      console.log(form.getValues()); // Log form values
+    await form.trigger(['Firstname', 'Lastname', 'email', 'address', 'agreeToPrivacyPolicy']);
 
-    }else{
+const values = form.getValues();
+
+if (
+  values.Firstname.length >= 2 &&
+  values.Lastname.length >= 2 &&
+  z.string().email().safeParse(values.email).success &&
+  values.address.length >= 2 &&
+  values.agreeToPrivacyPolicy === true
+) {
+  goTo(2); // Proceed to the next step
+  console.log(values); // Log form values
+}
+else{
       goTo(1)
     }
   }else{

@@ -5,22 +5,22 @@ import { UseFormReturn } from 'react-hook-form';
 const Paymentform = ({form}:{form:UseFormReturn<{
   Firstname: string;
   amount: number;
-  contact: string;
   Lastname: string;
   email: string;
-  phone: string;
-  country: string;
   address: string;
-  postalCode: string;
-  city: string;
-  stateProvince: string;
-    comment?: string | undefined;
+  comment?: string | undefined;
+  phone?: string | undefined;
+  country?: string | undefined;
+  postalCode?: string | undefined;
+  city?: string | undefined;
+  agreeToPrivacyPolicy:boolean;
+  stateProvince?: string | undefined;
 }, any, undefined>}) => {
   return (
     <div key={3}>Step 3: Confirm Submission
     <FormField
       control={form.control}
-      name="contact"
+      name="phone"
       render={({ field }) => (
         <FormItem>
           <FormLabel>Contact</FormLabel>

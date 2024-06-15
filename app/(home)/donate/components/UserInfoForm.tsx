@@ -3,20 +3,21 @@ import { Input } from '@/components/ui/input'
 import React from 'react'
 import { UseFormReturn } from 'react-hook-form';
 import CountrySelect from './CountrySelect';
+import { Checkbox } from '@/components/ui/checkbox';
 
 const UserInfoForm = ({form}:{form:UseFormReturn<{
   Firstname: string;
-  amount: number;
-  contact: string;
-  Lastname: string;
-  email: string;
-  phone: string;
-  country: string;
-  address: string;
-  postalCode: string;
-  city: string;
-  stateProvince: string;
+    amount: number;
+    Lastname: string;
+    email: string;
+    address: string;
     comment?: string | undefined;
+    phone?: string | undefined;
+    country?: string | undefined;
+    postalCode?: string | undefined;
+    city?: string | undefined;
+    agreeToPrivacyPolicy:boolean;
+    stateProvince?: string | undefined;
 }, any, undefined>}) => {
   return (
     <div
@@ -113,7 +114,7 @@ const UserInfoForm = ({form}:{form:UseFormReturn<{
             '>
               <FormLabel>Country</FormLabel>
               <FormControl>
-                <CountrySelect setCountry={field.onChange} country={field.value} key={1}/>
+                <CountrySelect setCountry={field.onChange} country={field.value||""} key={1}/>
               </FormControl>
                
               <FormMessage />
@@ -141,7 +142,73 @@ const UserInfoForm = ({form}:{form:UseFormReturn<{
             </FormItem>
           )}
         />
-        
+         <div
+    className='flex-row
+    flex
+    gap-x-4'>
+<FormField
+          control={form.control}
+          name="postalCode"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Postal code</FormLabel>
+              <FormControl>
+                <Input
+                 className='focus-within:ring-0
+              focus-visible:ring-0'
+                
+                placeholder="Postal code" {...field} />
+              </FormControl>
+               
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="city"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>city</FormLabel>
+              <FormControl>
+                <Input
+                 className='focus-within:ring-0
+              focus-visible:ring-0'
+                placeholder="city" {...field} />
+              </FormControl>
+               
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+    </div>
+
+
+    <FormField
+          control={form.control}
+          name="agreeToPrivacyPolicy"
+          render={({ field }) => (
+            <FormItem>
+              
+              <FormControl>
+              <div
+className='flex
+gap-x-4
+flex-row
+w-full
+items-center'>
+  <Checkbox
+  checked={field.value}
+  onCheckedChange={field.onChange}
+  />
+  <div>By donating with this form, you agree to our <a href="">Privacy Policy</a></div>
+</div>
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+    
         </div>
   )
 }

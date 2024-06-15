@@ -12,17 +12,17 @@ interface DonateNowFormprops{
     next:()=>void,
     form:UseFormReturn<{
       Firstname: string;
-  amount: number;
-  contact: string;
-  Lastname: string;
-  email: string;
-  phone: string;
-  country: string;
-  address: string;
-  postalCode: string;
-  city: string;
-  stateProvince: string;
-    comment?: string | undefined;
+      amount: number;
+      Lastname: string;
+      email: string;
+      address: string;
+      comment?: string | undefined;
+      phone?: string | undefined;
+      country?: string | undefined;
+      postalCode?: string | undefined;
+      city?: string | undefined;
+    agreeToPrivacyPolicy:boolean;
+      stateProvince?: string | undefined;
   }, any, undefined>
 }
 const DonateNowForm:React.FC<DonateNowFormprops> = ({
