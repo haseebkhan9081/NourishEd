@@ -26,6 +26,9 @@ const PaypalDialogue = ({handleTransaction}:{handleTransaction:(params:any)=>voi
           </DialogTitle>
           <DialogDescription className="text-gray-600 mb-4">
             Your donation will help us continue our work. Please choose your preferred payment method by clicking on the button below.
+            <p className="font-light text-sm text-gray-600 italic mb-4">
+        if you dont see a button please refresh
+      </p>
           </DialogDescription>
         </DialogHeader>
         <div className="flex justify-center">
