@@ -1,7 +1,7 @@
 "use client"
-import React, { FormEvent } from 'react'
+import React, { FormEvent, useEffect } from 'react'
 import { useCustomForm } from '../hooks/useCustomForm'
-import { Divide } from 'lucide-react'
+import { Currency, Divide } from 'lucide-react'
 import DonateNowForm from './DonateNowForm';
 import { Button } from '@/components/ui/button';
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -22,6 +22,9 @@ import ChooseAmountForm from './ChooseAmountForm';
 import UserInfoForm from './UserInfoForm';
 import Paymentform from './Paymentform';
 import { toast } from 'sonner';
+import PaypalDonateButton from './PaypalButton';
+import PaypalDialogue from './PaypalDialogue';
+import useData from '@/app/hooks/useData';
 
 const formSchema = z.object({
   Firstname: z.string()
@@ -29,16 +32,16 @@ const formSchema = z.object({
     .max(50, { message: "First name must be no more than 50 characters long" }),
   
   amount: z.union([
-    z.number().min(10, { message: "Amount must be at least $10" }),
+    z.number().min(0, { message: "Amount must be at least $10" }),
     z.string().transform((val:any) => parseFloat(val)).refine((val:number) => val >= 10, {
       message: "Amount must be at least $10",
     })
   ]),
+  currency:z.string(),
+  status:z.string(),
+  transactionId:z.string(),
+
   
-  comment: z.string()
-    .min(2, { message: "Comment must be at least 2 characters long" })
-    .max(50, { message: "Comment must be no more than 50 characters long" })
-    .optional(),
   
   Lastname: z.string()
     .min(2, { message: "Last name must be at least 2 characters long" })
@@ -79,9 +82,10 @@ const formSchema = z.object({
 
 
 const titles=[
-   "Choose amount",
+   
    "Information",
-   "Payment" 
+   "Payment"
+    
 ]
 const MainForm = () => {
     // 1. Define your form.
@@ -93,6 +97,15 @@ const MainForm = () => {
       
     },
   })
+  const {transactionDetails}=useData()
+
+  useEffect(()=>{
+console.log("transactionDetails set",transactionDetails)
+  },[transactionDetails])
+
+  function handleTransaction(params:any){
+console.log("recived in the form here ",params)
+  }
   function onSubmit(values: z.infer<typeof formSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
@@ -100,14 +113,13 @@ const MainForm = () => {
     console.log(values)
   }
     const steps:React.ReactNode[] = [
-        <ChooseAmountForm key={1} form={form}/>,
         <UserInfoForm key={2} form={form}/>,
-       <Paymentform key={3} form={form}/>,
+        <Paymentform key={3} form={form}/>
       ];
      
 
 
-    const {next,currentStepIndex,goTo,isFirstStep,isLastStep,step}=useCustomForm({steps})
+    const {next,currentStepIndex,goTo,isFirstStep,isLastStep,step,back}=useCustomForm({steps})
   return (
     <Form {...form} >
 
@@ -125,6 +137,7 @@ const MainForm = () => {
         flex
         flex-col'>
  <DonateNowForm
+ back={back}
  form={form}
  next={next}
  goto={goTo}
@@ -139,12 +152,18 @@ title={titles[currentStepIndex]}
  p-6
  w-full
  flex-row'>
-<Button
+  {isLastStep?<div
+  className='flex
+  w-full
+  justify-center
+  items-center'
+  ><PaypalDialogue
+  handleTransaction={handleTransaction}
+  /></div>
+  :<Button
 onClick={async()=>{
-   await form.trigger(['amount']);
-  if (form.getValues().amount >= 10) {
-    goTo(1); // Proceed to the next step if amount is valid
-    console.log(form.getValues()); // Log form values
+   
+   
     await form.trigger(['Firstname', 'Lastname', 'email', 'address', 'agreeToPrivacyPolicy']);
 
 const values = form.getValues();
@@ -156,21 +175,18 @@ if (
   values.address.length >= 2 &&
   values.agreeToPrivacyPolicy === true
 ) {
-  goTo(2); // Proceed to the next step
+  goTo(1); // Proceed to the next step
   console.log(values); // Log form values
 }
-else{
-      goTo(1)
-    }
-  }else{
-    goTo(0)
-  }  
+ 
+    
  
 }}
 type='submit'
 className='w-full'>
-{isLastStep?`Pay Amount ${form.getValues().amount} $`:"Next"}
-</Button>
+ Next
+</Button>}
+
  </div>
  </form>
  </Form>

@@ -1,6 +1,6 @@
-import { Lock } from 'lucide-react'
+import { Backpack, Lock } from 'lucide-react'
 import React from 'react'
-import { FaArrowRight, FaCircle, FaRegCircle } from 'react-icons/fa'
+import { FaArrowLeft, FaArrowRight, FaCircle, FaRegCircle } from 'react-icons/fa'
 import { useCustomForm } from '../hooks/useCustomForm'
 import { UseFormReturn } from 'react-hook-form';
 interface DonateNowFormprops{
@@ -9,6 +9,7 @@ interface DonateNowFormprops{
     indexes:number;
     currentStepIndex:number,
     goto:(i:number)=>void,
+    back:()=>void;
     next:()=>void,
     form:UseFormReturn<{
       Firstname: string;
@@ -16,7 +17,9 @@ interface DonateNowFormprops{
       Lastname: string;
       email: string;
       address: string;
-      comment?: string | undefined;
+    currency:string;
+    status:string;
+    transactionId:string;
       phone?: string | undefined;
       country?: string | undefined;
       postalCode?: string | undefined;
@@ -31,7 +34,8 @@ const DonateNowForm:React.FC<DonateNowFormprops> = ({
     indexes,
     currentStepIndex,
     goto,
-    next
+    next,
+    back
 }) => {
 
     
@@ -69,11 +73,11 @@ size={12}
 />
 {Array.from({length:indexes},(_,index)=>(
 
-index===currentStepIndex?<FaCircle key={index} size={12}/>:<FaRegCircle onClick={()=>goto(index)}  key={index} size={12} />
+index===currentStepIndex?<FaCircle key={index} size={12}/>:<FaRegCircle   key={index} size={12} />
     
 ))}
-<FaArrowRight
-onClick={()=>next()}
+<FaArrowLeft
+onClick={()=>back()}
 className='ml-2' size={20}/>
 </div>
 

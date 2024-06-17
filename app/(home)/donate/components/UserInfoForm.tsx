@@ -11,7 +11,10 @@ const UserInfoForm = ({form}:{form:UseFormReturn<{
     Lastname: string;
     email: string;
     address: string;
-    comment?: string | undefined;
+    currency:string;
+  status:string;
+  transactionId:string;
+    
     phone?: string | undefined;
     country?: string | undefined;
     postalCode?: string | undefined;
