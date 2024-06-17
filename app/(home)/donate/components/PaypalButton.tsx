@@ -1,7 +1,7 @@
 import Script from 'next/script';
 import { useEffect, useState } from 'react';
 
-const Donate = ({ handleTransaction }) => {
+const Donate = ({ handleTransaction }:{handleTransaction:(data:any)=>void}) => {
   const [doPaypal, setDoPaypal] = useState(false);
   const [transactionDetails, setTransactionDetails] = useState(null);
 
