@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from '@/components/ui/button';
 import Donate from './PaypalButton';
- // Ensure the correct import path
+ 
 
 const PaypalDialogue = ({handleTransaction}:{handleTransaction:(params:any)=>void}) => {
   return (

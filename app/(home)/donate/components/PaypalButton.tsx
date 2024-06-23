@@ -1,9 +1,10 @@
 import Script from 'next/script';
 import { useEffect, useState } from 'react';
+import DonateButton from './DonateButton';
 
 const Donate = ({ handleTransaction }:{handleTransaction:(data:any)=>void}) => {
   const [doPaypal, setDoPaypal] = useState(false);
-  const [transactionDetails, setTransactionDetails] = useState(null);
+  const [transactionDetails, setTransactionDetails] = useState<string>("");
 
   useEffect(() => {
     setDoPaypal(true);
@@ -22,8 +23,14 @@ const Donate = ({ handleTransaction }:{handleTransaction:(data:any)=>void}) => {
     <>
       {doPaypal && (
         <>
-          <div id="paypal-donate-button-container" className="flex justify-center items-center my-4"></div>
-          <Script id="donate-button-script">
+
+        <div>
+{//@ts-ignore
+
+          <DonateButton setTransactionDetails={setTransactionDetails}/>
+ } </div>
+          {/* <div id="paypal-donate-button-container" className="flex justify-center items-center my-4"></div>
+          <Script id="donate-button-script">  
             {`
               PayPal.Donation.Button({
                 env: 'sandbox',
@@ -34,12 +41,13 @@ const Donate = ({ handleTransaction }:{handleTransaction:(data:any)=>void}) => {
                   alt: 'Donate with PayPal button'
                 },
                 onComplete: function (params) {
-                  setTransactionDetails(params); // Update transaction details state
+                  
                   console.log('Transaction completed:', params);
+                  setTransactionDetails(params.amt)
                 },
               }).render('#paypal-donate-button-container');
             `}
-          </Script>
+          </Script> */}
         </>
       )}
     </>

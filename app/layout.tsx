@@ -18,14 +18,14 @@ export default function RootLayout({
   return (
     <html lang="en">
        <head>
-       <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" defer/>
-      </head>
+         </head>
       <body className={inter.className}>
       <Toaster position="top-center" richColors/>
       
         {children}
         <Script
-        src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js"
+          src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js"
+          strategy="afterInteractive"
         />
         </body>
     </html>

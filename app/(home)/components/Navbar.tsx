@@ -1,18 +1,14 @@
 "use client"
-import Image from 'next/image'
+ 
 import React, { useState } from 'react'
 import Logo from './Logo'
 import { Button } from '@/components/ui/button'
  
-import { Clipboard, EyeIcon, Heart, Home, Info, Loader2Icon, MenuIcon, Phone, PhoneCall, UserPlus } from 'lucide-react'
+import {  Loader2Icon,  } from 'lucide-react'
 import { usePathname, useRouter } from 'next/navigation'
  
-
-import Link from 'next/link'
-import clsx from 'clsx'
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa'
-import { GoMail } from 'react-icons/go'
-import { SiGmail } from 'react-icons/si'
+ 
+import NavigationMenuNavbar from './NavigationMenu'
 
 function  Navbar() {
 const router=useRouter()
@@ -60,175 +56,29 @@ const [isLoading,setIsLoading]=useState(false)
         
 
         {/* Navigation */}
+      
         <div
 
         className='
-        flex
-        gap-x-8
-        flex-row
+       
          
         '
         >
-            <Link
- href={'/'}
- className={clsx(
-    pathname=='/'&&'border-b-2 border-[#4CB566] transition ease-in duration-300'
- )}
- >
- <div 
-className='flex
-flex-row
-h-full
-w-full
-gap-x-2
-p-2
-items-center
-justify-center
- hover:bg-warmGreen
- rounded-md
- hover:text-white
- transition 
- ease-in 
- duration-300
-'>
-    <p className='xl:text-base text-sm'>Home</p>
-     </div></Link>           
+                 <NavigationMenuNavbar/>       
 
-<Link
-
-className={clsx(
-    pathname.includes('aboutus')&&'border-b-2 border-warmGreen transition ease-in duration-300'
- )}
-href={'/aboutus'}>
-<div 
-className='flex
-flex-row
-h-full
-w-full
-items-center
-gap-x-2
-justify-center
-hover:bg-warmGreen
- rounded-md
- hover:text-white
- transition 
- ease-in 
- p-2
- duration-300
-'>
-    <p className='xl:text-base text-base'>About Us</p>
-      </div>
-</Link>
+ 
      
    
 
-     <Link
-    className={clsx(
-        pathname.includes('programs')&&'border-b-2 border-[#4CB566] transition ease-in duration-300'
-     )}
+   
+
+
      
-     href={'/programs'}>
-     <div 
-className='flex
-flex-row
-h-full
-w-full
-gap-x-2
-items-center
-justify-center
-hover:bg-warmGreen
- rounded-md
- hover:text-white
- transition 
- ease-in 
- p-2
- duration-300
-'>
-    <p className='xl:text-base  text-sm'>Programs</p>
-     </div>
-     </Link>
-
-
- <Link
- className={clsx(
-    pathname.includes('getInvolved')&&'border-b-2 border-[#4CB566] transition ease-in duration-300'
- )}
- href={'/getInvolved'}>
-     <div 
-className='flex
-flex-row
-h-full
-w-full
-items-center
-gap-x-2
-justify-center
-hover:bg-warmGreen
- rounded-md
- hover:text-white
- transition 
- ease-in 
- duration-300
- p-2
-'>
-    <p className='xl:text-base text-sm'>Get Involved</p>
-     </div>
-    </Link>    
     
-    <Link
-     className={clsx(
-        pathname.includes('donate')&&'border-b-2 border-[#4CB566] transition ease-in duration-300'
-     )}
-    href={'/donate'}
-     >
-     <div 
-className='flex
-flex-row
-h-full
-w-full
-gap-x-2
-items-center
-justify-center
-hover:bg-warmGreen
- rounded-md
- hover:text-white
- transition 
- ease-in 
- p-2
- duration-300
-'>
-    <p className='xl:text-base text-sm'>Donate</p>
-     <Heart
-      className='w-4
-       
-      h-4'/></div>
-    </Link>
+    
     
 
- <Link
- className={clsx(
-    pathname.includes('contactUs')&&'border-b-2 border-[#4CB566] transition ease-in duration-300'
- )}
- href={'/contactUs'}
-  >
-<div 
-className='flex
-flex-row
-h-full
-w-full
-gap-x-2
-items-center
-justify-center
-hover:bg-warmGreen
- rounded-md
- hover:text-white
- transition 
- ease-in 
- p-2
- duration-300
-'>
-    <p className='xl:text-base text-sm'>Contact Us</p>
-      </div> 
- </Link> 
+  
         </div>
 
     </div>
