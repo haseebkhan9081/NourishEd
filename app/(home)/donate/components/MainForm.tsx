@@ -82,7 +82,7 @@ const formSchema = z.object({
 
 
 const titles=[
-   
+   "Amount",
    "Information",
    "Payment"
     
@@ -113,6 +113,7 @@ console.log("recived in the form here ",params)
     console.log(values)
   }
     const steps:React.ReactNode[] = [
+      <ChooseAmountForm key={1} form={form}  />,
         <UserInfoForm key={2} form={form}/>,
         <Paymentform key={3} form={form}/>
       ];
@@ -162,22 +163,29 @@ title={titles[currentStepIndex]}
   /></div>
   :<Button
 onClick={async()=>{
-   
-   
+   await form.trigger(['amount']);
+   const values = form.getValues();
+   if(values.amount>=10){
+    goTo(1); // Proceed to the next step
+    console.log(values); // Log form values
     await form.trigger(['Firstname', 'Lastname', 'email', 'address', 'agreeToPrivacyPolicy']);
 
-const values = form.getValues();
+    if (
+      values.Firstname.length >= 2 &&
+      values.Lastname.length >= 2 &&
+      z.string().email().safeParse(values.email).success &&
+      values.address.length >= 2 &&
+      values.agreeToPrivacyPolicy === true
+    ) {
+      goTo(2); // Proceed to the next step
+      console.log(values); // Log form values
+    }
+   }
+    
 
-if (
-  values.Firstname.length >= 2 &&
-  values.Lastname.length >= 2 &&
-  z.string().email().safeParse(values.email).success &&
-  values.address.length >= 2 &&
-  values.agreeToPrivacyPolicy === true
-) {
-  goTo(1); // Proceed to the next step
-  console.log(values); // Log form values
-}
+ 
+
+
  
     
  

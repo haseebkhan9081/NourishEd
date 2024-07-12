@@ -12,17 +12,22 @@ const ChooseAmountForm = ({form}:{form:UseFormReturn<{
     Lastname: string;
     email: string;
     address: string;
-    comment?: string | undefined;
+    currency:string;
+  status:string;
+  transactionId:string;
+    
     phone?: string | undefined;
     country?: string | undefined;
     postalCode?: string | undefined;
     city?: string | undefined;
-    stateProvince?: string | undefined;
     agreeToPrivacyPolicy:boolean;
+    stateProvince?: string | undefined;
+    comment?:String|undefined
 }, any, undefined>}) => {
 
   const predefinedAmounts = [10, 20, 50,60,70,80,90,100];
-const [isComment,setIsComment]=useState(false)
+const [isComment,setIsComment]=useState(false);
+const [selected,setSelected]=useState("one time");
   return (
     <div
     className='space-y-8'> 
@@ -59,13 +64,48 @@ const [isComment,setIsComment]=useState(false)
               focus-visible:ring-0'
               placeholder="custom amount" {...field} />
               </div>
+              
             </FormControl>
             <FormMessage />
           </FormItem>
         )}
       />
 
+<div
+              className='flex
+              w-full
+              flex-row
+              gap-x-4'>
+<Button
+ onClick={()=>setSelected("one time")}
+className={
+  cn(
+    selected==="one time"&&'ring-1 ring-sky-300 text-sky-300'
+  )
+}
+variant={'outline'}
+>one time</Button>
+<Button
+onClick={()=>setSelected("Monthly")}
+className={
+  cn(
+    selected==="Monthly"&&'ring-1 ring-sky-300 text-sky-300'
+  )
+}
+variant={'outline'}
+>Monthly</Button>
+<Button
+onClick={()=>setSelected("Yearly")}
+className={
+  cn(
+    selected==="Yearly"&&'ring-1 ring-sky-300 text-sky-300'
+  )
+}
+variant={'outline'}
 
+>Yearly</Button>
+
+              </div>
 <FormField
 control={form.control}
 name={"comment"}
@@ -97,8 +137,12 @@ onCheckedChange={(v:boolean)=>{
 <div
 className='text-slate-700'>Write us a comment</div>
 </div>
-{isComment&&<Input
 
+{
+
+//@ts-ignore
+
+isComment&&<Input
 {...field}
 className='focus-within:ring-0
 focus-visible:ring-0

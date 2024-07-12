@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import React from 'react'
+import MainForm from '../donate/components/MainForm'
 
 function PowerOfaMeal() {
     const router=useRouter()
@@ -22,12 +23,16 @@ h-full
 grid
 md:grid-cols-2
 grid-cols-1
- gap-4
+ gap-8
+ justify-between
+ 
  md:flex-row
  md:justify-between
 
  
 '>
+
+  <div>
 <Image
 src={"/image1.png"}
 alt=''
@@ -69,6 +74,16 @@ bg-warmRed'
   Give hope now
 </Button>
 
+</div>
+
+</div>
+<div
+className='w-full
+items-center
+justify-center
+flex'
+>
+<MainForm/>
 </div>
 </div>
   )

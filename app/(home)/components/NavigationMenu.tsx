@@ -22,24 +22,25 @@ import {
 } from "@/components/ui/navigation-menu"
 import clsx from "clsx"
 import { usePathname, useRouter } from "next/navigation"
-import { ChevronDown, ChevronUp, Heart } from "lucide-react"
+import { ChevronDown, ChevronUp, Dot, Heart } from "lucide-react"
+ 
 
 const aboutUs: { title: string; href: string; }[] = [
   {
     title: "Our Journey",
-    href: "/ourjourney",
+    href: "/aboutus/ourJourney",
      },
      {
         title: "Our Mission & Vision",
-        href: "/ourjourney",
+        href: "/aboutus/ourMissionandVision",
          },
          {
             title: "Our Board of Directors",
-            href: "/ourjourney",
+            href: "/aboutus/ourBoardOFDirectors",
              },
              {
                 title: "Our Team",
-                href: "/ourjourney",
+                href: "/aboutus/ourTeam",
                  },
   
    
@@ -49,7 +50,7 @@ const aboutUs: { title: string; href: string; }[] = [
 const programs: { title: string; href: string; }[] = [
     {
       title: "Library of Ibrahim Goth Food support",
-      href: "/ourjourney",
+      href: "/programs/1",
        } 
     
      
@@ -58,20 +59,22 @@ const programs: { title: string; href: string; }[] = [
   const getInvolved: { title: string; href: string; }[] = [
     {
       title: "Become a Volunteer",
-      href: "/ourjourney",
+      href: "/getInvolved/becomeAvolunteer",
        } ,
        {
         title: "Become Partner",
-        href: "/ourjourney",
+        href: "/getInvolved/becomeApartner",
          } 
     
      
   ] 
 
 export default function NavigationMenuNavbar() {
+ 
     const [isOpen,setIsOpen]=React.useState(false);
     const router=useRouter()
  const pathname=usePathname()
+ console.log("the pathname",pathname)
 
   return (
     <NavigationMenu
@@ -107,6 +110,7 @@ justify-center
  duration-300
 '>
     <p className='xl:text-base text-sm'>Home</p>
+    {pathname==="/"&&<Dot className="w-8 h-8 text-warmGreen"/>}
      </div></Link> 
         </NavigationMenuItem >
         <NavigationMenuItem className="">
@@ -115,12 +119,31 @@ justify-center
 
             <ul className="min-w-max flex
             flex-col
-            space-y-4
+            space-y-2
+            p-3
             justify-center  
             items-center
-            p-3 ">
+              ">
               {aboutUs.map((aboutUs) => (
-                 <li key={aboutUs.title}>{aboutUs.title}</li>
+                 <li 
+                 className="p-3
+                 rounded-md
+                 w-full
+                 items-center
+                 justify-center
+                 hover:bg-slate-100"
+                 key={aboutUs.title}>
+                  <Link
+                  href={aboutUs.href}
+                  className="flex
+                  flex-row
+                  gap-x-2
+                  items-center
+                  justify-center"
+                  >{aboutUs.title}
+                  {pathname===aboutUs.href&&<Dot className="w-8 h-8 text-warmGreen"/>}
+                 </Link>
+                  </li>
               ))}
             </ul>
           </NavigationMenuContent>
@@ -130,12 +153,29 @@ justify-center
         <NavigationMenuContent>
             <ul className="min-w-max flex
             flex-col
-            space-y-4
+            space-y-2
+            p-3
             justify-center  
-            items-center
-            p-3 ">
+            items-center">
               {programs.map((item) => (
-                 <li key={item.title}>{item.title}</li>
+                 <li
+                 className="p-3
+                 rounded-md
+                 w-full
+                 items-center
+                 justify-center
+                 hover:bg-slate-100"
+                 
+                 key={item.title}><Link
+                 className="flex
+                  flex-row
+                  gap-x-2
+                  items-center
+                  justify-center"
+                 href={item.href}
+                 >{item.title}
+                 {pathname===item.href&&<Dot className="w-8 h-8 text-warmGreen"/>}
+                 </Link></li>
               ))}
             </ul>
           </NavigationMenuContent>
@@ -161,16 +201,36 @@ justify-center
   
   </HoverCardTrigger>
   <HoverCardContent
+  className="p-2"
   align="center">
  
             <ul className="min-w-max flex
             flex-col
-            space-y-4
+            space-y-2
             justify-center  
             items-center
-            p-3 ">
+             ">
               {getInvolved.map((item) => (
-                 <li key={item.title}>{item.title}</li>
+                 <li
+                 className="
+                 p-3
+                 rounded-md
+                 w-full
+                 items-center
+                 justify-center
+                 hover:bg-slate-100"
+                 
+                 key={item.title}><Link
+                 className="flex
+                  flex-row
+                  gap-x-2
+                  items-center
+                  justify-center"
+                 href={item.href}
+                 >{item.title}
+                 {pathname===item.href&&<Dot className="w-8 h-8 text-warmGreen"/>}
+                 
+                 </Link></li>
               ))}
             </ul>
         
@@ -184,7 +244,7 @@ justify-center
         <Link
      className={clsx(
         'inline-flex h-10 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-slate-100 hover:text-slate-900 ',
-        pathname.includes('donate')&&'border-b-2 border-[#4CB566] transition ease-in duration-300'
+        
      )}
     href={'/donate'}
      >
@@ -206,15 +266,20 @@ justify-center
 '>
     <p className='xl:text-base text-sm'>Donate</p>
      <Heart
-      className='w-4
-       
-      h-4'/></div>
+className={
+  cn(
+    `w-4 h-4`,
+pathname==='/donate'&&'text-red-500'
+  )
+}
+      
+      /></div>
     </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
         <Link
  className={clsx('inline-flex h-10 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-slate-100 hover:text-slate-900 ',
-    pathname.includes('contactUs')&&'border-b-2 border-[#4CB566] transition ease-in duration-300'
+    
  )}
  href={'/contactUs'}
   >
@@ -235,6 +300,8 @@ justify-center
  duration-300
 '>
     <p className='xl:text-base text-sm'>Contact Us</p>
+    {pathname==="/contactUs"&&<Dot className="w-8 h-8 text-warmGreen"/>}
+
       </div> 
  </Link>
         </NavigationMenuItem>
