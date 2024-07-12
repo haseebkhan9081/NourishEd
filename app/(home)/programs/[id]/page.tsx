@@ -7,6 +7,7 @@ import Link from 'next/link';
 // Import the useRouter hook from 'next/router'
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import Charts from './components/charts';
 interface Program {
   id:number;
   title: string;
@@ -159,6 +160,7 @@ bg-warmRed'
 
 </div>
 </div>
+<Charts/>
     </div>
   );
 };
