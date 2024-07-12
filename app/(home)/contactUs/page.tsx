@@ -118,7 +118,7 @@ const [state,setIsState]=useState(false)
           pb-6
           items-center
           ">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/people/NourishEd-Pakistan/61560621039365/?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
               <FaFacebook
               className='
               text-blue-500 hover:text-blue-800 transition-colors duration-300 ease-in-out
@@ -154,7 +154,7 @@ const [state,setIsState]=useState(false)
                text-2xl'
               />
                  </a>
-                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                 <a href="https://whatsapp.com/channel/0029VacDYOGBPzjd5l8nZz0w" target="_blank" rel="noopener noreferrer">
               <FaWhatsapp
              className='
              text-green-500 hover:text-green-700 transition-colors duration-300 ease-in-out
