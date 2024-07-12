@@ -32,7 +32,7 @@ const initialData = {
     {
       label: 'Enrollment by Grade Level',
       data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // Start with zeros for initial animation
-      backgroundColor: 'rgba(75, 192, 192, 0.6)',
+      backgroundColor: 'rgba(52, 211, 153, 0.6)', // Use warmGreen color from Tailwind CSS
     },
   ],
 };
@@ -42,7 +42,7 @@ export default function EnrollmentChart() {
   const [chartData, setChartData] = useState(initialData);
   const { ref, inView } = useInView({
     triggerOnce: false, // Allow multiple triggers
-    threshold: 0.5, // Trigger when 90% of the component is in view
+    threshold: 0.5, // Trigger when 50% of the component is in view
   });
 
   useEffect(() => {

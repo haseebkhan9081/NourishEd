@@ -29,7 +29,7 @@ const initialData = {
     {
       label: 'Number of Students',
       data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // Start with zeros for initial animation
-      backgroundColor: 'rgba(75, 192, 192, 0.6)',
+      backgroundColor: 'rgba(52, 211, 153, 0.6)', // Example color
     },
   ],
 };
@@ -39,7 +39,7 @@ export default function AgeWiseStudentsChart() {
   const [chartData, setChartData] = useState(initialData);
   const { ref, inView } = useInView({
     triggerOnce: false, // Allow multiple triggers
-    threshold: 0.5, // Trigger when 90% of the component is in view
+    threshold: 0.9, // Trigger when 90% of the component is in view
   });
 
   useEffect(() => {
@@ -50,6 +50,7 @@ export default function AgeWiseStudentsChart() {
           datasets: [
             {
               ...initialData.datasets[0],
+              backgroundColor: 'rgba(52, 211, 153, 0.6)', // Replace with warmGreen from Tailwind CSS
               data: [2, 5, 10, 15, 13, 14, 14, 12, 8, 11, 8], // Replace with actual data
             },
           ],
