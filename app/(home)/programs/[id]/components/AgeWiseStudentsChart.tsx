@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
+import { useInView } from 'react-intersection-observer';
 
 // Register Chart.js components
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
@@ -22,12 +23,12 @@ const options = {
 
 // Data for the chart
 const labels = ['4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14'];
-const data = {
+const initialData = {
   labels,
   datasets: [
     {
       label: 'Number of Students',
-      data: [2, 5, 10, 15, 13, 14, 14, 12, 8, 11, 8], // Replace with actual data
+      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // Start with zeros for initial animation
       backgroundColor: 'rgba(75, 192, 192, 0.6)',
     },
   ],
@@ -35,9 +36,37 @@ const data = {
 
 // Export the chart component
 export default function AgeWiseStudentsChart() {
+  const [chartData, setChartData] = useState(initialData);
+  const { ref, inView } = useInView({
+    triggerOnce: false, // Allow multiple triggers
+    threshold: 0.5, // Trigger when 90% of the component is in view
+  });
+
+  useEffect(() => {
+    if (inView) {
+      const animateChartData = () => {
+        setChartData({
+          labels,
+          datasets: [
+            {
+              ...initialData.datasets[0],
+              data: [2, 5, 10, 15, 13, 14, 14, 12, 8, 11, 8], // Replace with actual data
+            },
+          ],
+        });
+      };
+
+      // Trigger animation or data loading when component is in view
+      animateChartData();
+    } else {
+      // Reset chartData when out of view
+      setChartData(initialData);
+    }
+  }, [inView]);
+
   return (
-    <div className='h-[500px] p-4 md:p-6 w-full md:w-[650px]'>
-      <Bar data={data} options={options} />
+    <div ref={ref} className='h-[500px] p-4 md:p-6 w-full md:w-[650px]'>
+      <Bar data={chartData} options={options} />
     </div>
   );
 }
