@@ -8,7 +8,7 @@ const programs = [
     count: 120,
     description: "Children supported by the Ibrahim Goth Library food program.",
     longDescription: "The Ibrahim Goth Library Food Support program aims to provide nutritional assistance to children in need within the community served by the library. Through this initiative, we ensure that 120 children receive essential meals regularly, contributing to their overall health and well-being. Additionally, we strive to promote a culture of learning and literacy by combining food support with educational activities at the library.",
-    image: "/ibrahim-goth-library-food-support.png"
+    image: "/8.jpg"
   },
   {
     id: 3,

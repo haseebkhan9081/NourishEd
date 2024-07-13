@@ -6,9 +6,12 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 const images = [
-  { src: "/image1.png" },
-  { src: "/image2.png" },
-  { src: "/image3.png" }
+  { src: "/5.jpg" },
+  { src: "/6.jpg" },
+  { src: "/7.jpg" },
+  { src: "/9.jpg" },
+  
+  
 ];
 
 interface CarouslHomeProps {
@@ -26,7 +29,7 @@ const CarouslHome: React.FC<CarouslHomeProps> = ({ onLoad }) => {
   }, [onLoad]);
 const router=useRouter()
   return (
-    <div className="h-44   md:h-[400px] xl:h-[600px] 2xl:h-[700px]">
+    <div className="h-44   md:h-[400px] xl:h-[700px] 2xl:h-[900px]">
       <Carousel
         slideInterval={2000}
         pauseOnHover

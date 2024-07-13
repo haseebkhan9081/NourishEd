@@ -17,9 +17,7 @@ md:py-24
 py-12
 md:px-32
 px-4
-w-full
-
-h-full
+ 
 grid
 md:grid-cols-2
 grid-cols-1
@@ -32,14 +30,26 @@ grid-cols-1
  
 '>
 
-  <div>
+  <div
+  className='justify-center
+  items-center
+  flex
+  flex-col'>
+    <div
+    className='w-96
+
+    justify-center
+    items-center
+    '>
 <Image
-src={"/image1.png"}
+className='rounded-md'
+src={"/13.jpg"}
 alt=''
 width={100}
 height={100}
 layout='responsive'
 />
+</div>
 <div
 className='flex
 transition duration-300 ease-in-out

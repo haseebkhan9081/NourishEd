@@ -29,8 +29,8 @@ function LeadershipandTeam() {
     const Officers = [
         {img: 'team.png', name: 'Khurram Ismail', position: 'President'},
         {img: 'team.png', name: 'Raheel ', position: 'Merchant Treasurer'},
+        {img: 'team.png', name: 'Ali Tahir', position: 'Ops Manager'},
         {img: 'team.png', name: 'Yasir Salim', position: 'Secretary'},
-        {img: 'team.png', name: 'Ali Tahir', position: 'Ops Manager'}
     ];
 
     return (

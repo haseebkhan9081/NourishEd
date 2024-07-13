@@ -120,10 +120,11 @@ grid-cols-1
 <Image
 src={programData?.image||""}
 alt={programData?.title||""}
+
 width={100}
 height={100}
 layout='responsive'
-className='rounded-sm'
+className='rounded-md'
 />
 <div
 className='flex
