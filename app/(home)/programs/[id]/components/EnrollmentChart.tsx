@@ -32,7 +32,7 @@ const initialData = {
     {
       label: 'Enrollment by Grade Level',
       data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // Start with zeros for initial animation
-      backgroundColor: 'rgba(52, 211, 153, 0.6)', // Use warmGreen color from Tailwind CSS
+      backgroundColor: 'rgba(162, 189, 157, 1)', // Use warmGreen color from Tailwind CSS
     },
   ],
 };

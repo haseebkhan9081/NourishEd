@@ -29,8 +29,8 @@ const initialData = {
     {
       label: 'Average Salary',
       data: [0, 0, 0, 0, 0, 0, 0], // Start with zeros for initial animation
-      backgroundColor: 'rgba(52, 211, 153, 0.2)', // Example color
-      borderColor: 'rgba(52, 211, 153, 1)', // Example color
+      backgroundColor: 'rgba(162, 189, 157, 1)', // Example color
+      borderColor: 'rgba(162, 189, 157, 1)', // Example color
       borderWidth: 1,
       fill: true,
       tension: 0.1,
@@ -55,8 +55,8 @@ export default function SalaryChart() {
             {
               ...initialData.datasets[0],
               data: [35000, 20000, 30000, 20000, 26000, 41000, 26429], // Replace with actual salary data
-              backgroundColor: 'rgba(52, 211, 153, 0.2)', // Update to warmGreen color
-              borderColor: 'rgba(52, 211, 153, 1)', // Update to warmGreen color
+              backgroundColor: 'rgba(162, 189, 157, 1)', // Update to warmGreen color
+              borderColor: 'rgba(162, 189, 157, 1)', // Update to warmGreen color
             },
           ],
         });

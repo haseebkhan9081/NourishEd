@@ -50,7 +50,7 @@ export default function AgeWiseStudentsChart() {
           datasets: [
             {
               ...initialData.datasets[0],
-              backgroundColor: 'rgba(52, 211, 153, 0.6)', // Replace with warmGreen from Tailwind CSS
+              backgroundColor: 'rgba(162, 189, 157, 1)', // Replace with warmGreen from Tailwind CSS
               data: [2, 5, 10, 15, 13, 14, 14, 12, 8, 11, 8], // Replace with actual data
             },
           ],

@@ -21,7 +21,7 @@ const config = {
     },
     extend: {
       colors: {
-        warmGreen: '#4CB566',
+        warmGreen: '#A2BD9D',
         softYellow: '#FAD02E',
         neutralWhite: '#FFFFFF',
         warmOrange: '#F39C12',

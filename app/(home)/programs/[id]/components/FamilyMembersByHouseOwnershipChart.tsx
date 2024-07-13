@@ -29,12 +29,12 @@ const initialData = {
     {
       label: 'Own',
       data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // Start with zeros for initial animation
-      backgroundColor: 'rgba(54, 162, 235, 0.6)', // Blue color for 'Own'
+      backgroundColor: 'rgba(63, 81, 181, 0.5)', // Blue color for 'Own'
     },
     {
       label: 'Rental',
       data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // Start with zeros for initial animation
-      backgroundColor: 'rgba(255, 99, 132, 0.6)', // Red color for 'Rental'
+      backgroundColor: 'rgba(162, 189, 157, 0.5)', // Red color for 'Rental'
     },
   ],
 };
@@ -55,12 +55,12 @@ export default function FamilyMembersByHouseOwnershipChart() {
           datasets: [
             {
               ...initialData.datasets[0],
-              backgroundColor: 'rgba(52, 211, 153, 0.6)', // Replace with warmGreen from Tailwind CSS or other color for 'Own'
+              backgroundColor: 'rgba(63, 81, 181, 1)', // Replace with warmGreen from Tailwind CSS or other color for 'Own'
               data: [8, 14, 6, 7, 6, 7, 1, 3, 1, 13], // Replace with actual data for 'Own'
             },
             {
               ...initialData.datasets[1],
-              backgroundColor: 'rgba(242, 153, 74, 0.6)', // Replace with another color for 'Rental'
+              backgroundColor: 'rgba(162, 189, 157, 1)', // Replace with another color for 'Rental'
               data: [7, 6, 7, 6, 7, 1, 3, 1, 13, 22], // Replace with actual data for 'Rental'
             },
           ],
