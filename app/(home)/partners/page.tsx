@@ -63,7 +63,7 @@ p-8">
   <div 
   key={index}
   className="flex flex-col items-center bg-neutralWhite p-4 rounded shadow-md">
-      <Image src="/partner1.png" alt="Partner 1" 
+      <Image src="/Logo.png" alt="Partner 1" 
       width={100}
       className='mb-4'
       height={100}

@@ -14,11 +14,10 @@ import Image from 'next/image'
 function LeadershipandTeam() {
 
     const BODUSA = [
-        {img: 'team.png', name: 'Faisal Hussain', position: 'BOD'},
-        {img: 'team.png', name: 'Fawad Ahmed', position: 'BOD'},
-        {img: 'team.png', name: 'Khurram Ismail', position: 'BOD'},
-        {img: 'team.png', name: 'Faisal Hussain', position: 'BOD'},
-        {img: 'team2.png', name: 'Saima Ismail', position: 'BOD'}
+      {img: 'team.png', name: 'Khurram Ismail', position: 'BOD'},
+      {img: 'team.png', name: 'Fawad Ahmed', position: 'BOD'},
+      {img: 'team2.png', name: 'Saima Ismail', position: 'BOD'},
+      {img: 'team.png', name: 'Faisal Hussain', position: 'BOD'},
     ];
 
     const bodPakistan = [
