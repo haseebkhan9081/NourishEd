@@ -81,12 +81,12 @@ const formSchema = z.object({
  
 
 
-const titles=[
-   "Amount",
-   "Information",
-   "Payment"
-    
-]
+const titles = [
+  "Step 1: Amount",
+  "Step 2: Information",
+  "Step 3: Payment"
+];
+
 const MainForm = () => {
     // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
@@ -139,6 +139,7 @@ console.log("recived in the form here ",params)
         flex-col'>
  <DonateNowForm
  back={back}
+  mainHeading="Donate Now"
  form={form}
  next={next}
  goto={goTo}

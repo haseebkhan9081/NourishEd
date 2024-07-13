@@ -2,9 +2,8 @@
 import { Transition } from '@headlessui/react'
 import React, { useEffect, useState } from 'react'
 import LeadershipandTeam from '../components/LeadershipandTeam'
- 
 
-function OurTeam() {
+function OurLeadershipAndTeam() {
   const [isShow, setIsShow] = useState(false)
   useEffect(() => {
     setIsShow(true)
@@ -23,7 +22,7 @@ function OurTeam() {
         leaveTo="translate-y-full opacity-0"
       >
         <div className='w-full justify-center items-center flex'>
-          <h1 className='text-white font-bold text-4xl'>Our Team</h1>
+          <h1 className='text-white font-bold text-4xl'>Our Leadership and Team</h1>
         </div>
       </Transition>
 
@@ -34,4 +33,4 @@ function OurTeam() {
   )
 }
 
-export default OurTeam
+export default OurLeadershipAndTeam

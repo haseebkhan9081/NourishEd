@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Carousel } from "flowbite-react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 const images = [
@@ -23,7 +24,7 @@ const CarouslHome: React.FC<CarouslHomeProps> = ({ onLoad }) => {
 
     return () => clearTimeout(timer);
   }, [onLoad]);
-
+const router=useRouter()
   return (
     <div className="h-44   md:h-[400px] xl:h-[600px] 2xl:h-[700px]">
       <Carousel
@@ -43,6 +44,7 @@ const CarouslHome: React.FC<CarouslHomeProps> = ({ onLoad }) => {
             />
             <div className="absolute inset-0 flex justify-center bg-black/25 opacity-0 hover:opacity-100 hover:transition hover:ease-in hover:duration-300 items-center h-full w-full">
               <Button
+              onClick={()=>router.push("/donate")}
                 size={"lg"}
                 className="bg-warmGreen opacity-100 bottom-0 flex"
               >

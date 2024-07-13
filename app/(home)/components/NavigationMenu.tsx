@@ -36,12 +36,9 @@ const aboutUs: { title: string; href: string; }[] = [
          },
          {
             title: "Our Board of Directors",
-            href: "/aboutus/ourBoardOFDirectors",
+            href: "/aboutus/ourBoardOFDirectorsAndTeam",
              },
-             {
-                title: "Our Team",
-                href: "/aboutus/ourTeam",
-                 },
+              
   
    
 ]
