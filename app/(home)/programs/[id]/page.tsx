@@ -161,7 +161,7 @@ bg-warmRed'
 
 </div>
 </div>
-<Charts/>
+ 
     </div>
   );
 };
