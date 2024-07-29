@@ -28,7 +28,7 @@ const UserInfoForm = ({form}:{form:UseFormReturn<{
     w-full
     flex
     flex-col
-    space-y-8' > 
+    space-y-4' > 
     <div
     className='flex-row
     flex
