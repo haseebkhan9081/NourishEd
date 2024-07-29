@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 const images = [
-  { src: "/5.jpg" },
+  
   { src: "/6.jpg" },
   { src: "/7.jpg" },
   { src: "/9.jpg" },
