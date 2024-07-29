@@ -16,7 +16,7 @@ function Statisticshome() {
           <h3 className="text-charcoalGray text-xl font-bold">Meals Served</h3>
           {inView && (
             <p className="text-charcoalGray text-3xl font-bold">
-              <CountUp end={1000000} duration={4} separator="," />
+              <CountUp end={1000} duration={4} separator="," />
               +
             </p>
           )}
